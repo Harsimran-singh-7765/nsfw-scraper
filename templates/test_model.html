@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Validation Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
+    <style>
+        .test-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .viewer-panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 450px;
+        }
+
+        .image-preview {
+            max-width: 100%;
+            max-height: 350px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+
+        .placeholder-icon {
+            font-size: 3rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .results-panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .prediction-pill {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .class-drawings {
+            background: #E91E63;
+            color: white;
+        }
+
+        .class-hentai {
+            background: #9C27B0;
+            color: white;
+        }
+
+        .class-neutral {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .class-porn {
+            background: #F44336;
+            color: white;
+        }
+
+        .class-sexy {
+            background: #FF9800;
+            color: white;
+        }
+
+        .prob-bar-container {
+            margin-bottom: 1rem;
+        }
+
+        .prob-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .prob-track {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .prob-fill {
+            height: 100%;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .action-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            background: var(--panel-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--panel-border);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .url-box {
+            display: flex;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        .url-input {
+            flex: 1;
+            background: var(--bg-color);
+            border: 1px solid var(--panel-border);
+            color: var(--text-main);
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        .loader {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid var(--accent);
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Switch Styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #333;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: var(--accent);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(14px);
+        }
+
+        .slider.round {
+            border-radius: 20px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        kbd {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            padding: 1px 4px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <div class="logo">
+                <a href="/"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                    <div class="status-indicator active"></div>
+                    <h1>Model <span class="highlight">Validation</span></h1>
+                </a>
+            </div>
+            <div class="controls">
+                <a href="/" class="btn secondary">Back to Scraper</a>
+            </div>
+        </header>
+
+        <section class="action-bar">
+            <div
+                style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; align-items: center; width: 100%;">
+                <div class="btn-group">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Validation
+                            Source</span>
+                        <div class="btn-group">
+                            <select id="source-mode" class="url-input"
+                                style="width: 140px; background: rgba(0,0,0,0.2);">
+                                <option value="random">🎲 Random</option>
+                                <option value="sequential">📏 Sequential</option>
+                            </select>
+                            <select id="seq-category" class="url-input"
+                                style="width: 120px; display: none; background: rgba(0,0,0,0.2);">
+                                <option value="sexy">Sexy</option>
+                                <option value="porn">Porn</option>
+                                <option value="hentai">Hentai</option>
+                                <option value="drawings">Drawings</option>
+                                <option value="neutral">Neutral</option>
+                            </select>
+                            <button id="next-btn" class="btn primary">Next Image</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-left: 1rem;">
+                        <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Manual
+                            Actions</span>
+                        <div class="btn-group">
+                            <button id="upload-btn" class="btn secondary">📤 Upload</button>
+                            <input type="file" id="file-input" style="display: none;" accept="image/*">
+                            <button id="predict-btn" class="btn secondary" disabled
+                                style="border-color: var(--accent); color: var(--accent);">🚀 Classify</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div id="seq-info" style="display: none; text-align: right; margin-right: 1rem;">
+                        <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-main);"><span
+                                id="seq-current">0</span> / <span id="seq-total">0</span></div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Images
+                            processed</div>
+                    </div>
+                    <div
+                        style="display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.2); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--panel-border);">
+                        <span style="font-size: 0.8rem; font-weight: 600;">⚡ Rapid Mode</span>
+                        <label class="switch">
+                            <input type="checkbox" id="rapid-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="url-box" style="width: auto; min-width: 250px;">
+                        <input type="text" id="url-input" class="url-input" placeholder="Paste image URL...">
+                        <button id="url-btn" class="btn secondary">🔗 Fetch</button>
+                    </div>
+                    <div id="loader" class="loader"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-grid">
+            <div class="viewer-panel" id="viewer">
+                <div class="placeholder-icon" id="placeholder">🖼️</div>
+                <p id="placeholder-text" style="color: var(--text-muted);">Select an image to validate the model</p>
+                <img id="preview" class="image-preview" src="" alt="Preview">
+                <p id="img-path"
+                    style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); margin-top: 1rem; text-align: center; max-width: 90%; word-break: break-all;">
+                </p>
+                <div id="hotkey-hint"
+                    style="margin-top: auto; padding: 1rem; font-size: 0.8rem; color: var(--text-muted); text-align: center; border-top: 1px solid var(--panel-border); display: none;">
+                    Keys: <kbd>Y</kbd> (Yes) | <kbd>N</kbd> (No) | <kbd>R</kbd> (Random) <br>
+                    <div style="margin-top: 0.5rem;">
+                        <kbd>1</kbd> Neutral | <kbd>2</kbd> Drawings | <kbd>3</kbd> Sexy | <kbd>4</kbd> Porn |
+                        <kbd>5</kbd> Hentai
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-panel">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h2 style="margin: 0;">Prediction Result</h2>
+                    <button id="stats-btn" class="btn secondary"
+                        style="font-size: 0.7rem; padding: 5px 12px; border-color: var(--accent); color: var(--accent);">📊
+                        Stats</button>
+                </div>
+                <div id="result-placeholder" style="color: var(--text-muted); margin-top: 2rem; text-align: center;">
+                    Waiting for input...
+                </div>
+                <div id="result-content" style="display: none;">
+                    <div id="top-prediction" class="prediction-pill">---</div>
+                    <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Confidence: <span id="top-confidence"
+                            style="color: var(--text-main); font-weight: 700;">0%</span>
+                    </div>
+
+                    <h3 style="font-size: 1rem; margin-bottom: 1rem;">Full Confidence Breakdown</h3>
+                    <div id="probabilities-mount" style="margin-bottom: 2rem;">
+                        <!-- Prob bars -->
+                    </div>
+
+                    <!-- Feedback Section -->
+                    <div id="feedback-section"
+                        style="border-top: 1px solid var(--panel-border); padding-top: 1.5rem; margin-top: 1.5rem;">
+                        <h4 style="font-size: 0.9rem; margin-bottom: 1rem;">Was this prediction correct?</h4>
+                        <div class="btn-group" id="feedback-initial">
+                            <button id="fb-yes" class="btn secondary"
+                                style="border-color: var(--success); color: var(--success);">Yes, Correct</button>
+                            <button id="fb-no" class="btn secondary"
+                                style="border-color: var(--danger); color: var(--danger);">No, Incorrect</button>
+                        </div>
+
+                        <div id="fb-correction" style="display: none; margin-top: 1rem;">
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">What is the
+                                correct category?</p>
+                            <div class="url-box">
+                                <select id="fb-correct-label" class="url-input" style="flex: 1;">
+                                    <option value="neutral">Neutral</option>
+                                    <option value="drawings">Drawings</option>
+                                    <option value="sexy">Sexy</option>
+                                    <option value="porn">Porn</option>
+                                    <option value="hentai">Hentai</option>
+                                </select>
+                                <button id="fb-submit" class="btn primary">Save Ground Truth</button>
+                            </div>
+                        </div>
+                        <p id="fb-thanks"
+                            style="display: none; color: var(--success); font-size: 0.9rem; margin-top: 1rem;">✅
+                            Feedback saved! This helps train a better model.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Stats Modal -->
+        <div id="stats-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2 style="margin: 0;">📊 Model Accuracy</h2>
+                    <button id="close-stats" class="btn secondary" style="font-size: 0.8rem;">Close</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span id="stat-accuracy" class="stat-value">0%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                    <div class="stat-card">
+                        <span id="stat-total" class="stat-value">0</span>
+                        <span class="stat-label">Verified</span>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 0.9rem; margin-bottom: 1rem;">Category Breakdown</h3>
+                <div id="stats-cat-list" style="margin-bottom: 2rem;"></div>
+
+                <h3 style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--danger);">Top Mistakes</h3>
+                <div id="stats-confusion-list" style="font-size: 0.85rem; color: var(--text-muted);"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentImagePath = null;
+        let currentSourceType = 'local';
+        let currentPrediction = null;
+        let sequentialOffset = 0;
+
+        const ui = {
+            sourceMode: document.getElementById('source-mode'),
+            seqCategory: document.getElementById('seq-category'),
+            nextBtn: document.getElementById('next-btn'),
+            seqInfo: document.getElementById('seq-info'),
+            seqCurrent: document.getElementById('seq-current'),
+            seqTotal: document.getElementById('seq-total'),
+            uploadBtn: document.getElementById('upload-btn'),
+            fileInput: document.getElementById('file-input'),
+            urlInput: document.getElementById('url-input'),
+            urlBtn: document.getElementById('url-btn'),
+            predictBtn: document.getElementById('predict-btn'),
+            loader: document.getElementById('loader'),
+            preview: document.getElementById('preview'),
+            placeholder: document.getElementById('placeholder'),
+            placeholderText: document.getElementById('placeholder-text'),
+            imgPath: document.getElementById('img-path'),
+            resultPlaceholder: document.getElementById('result-placeholder'),
+            resultContent: document.getElementById('result-content'),
+            topPrediction: document.getElementById('top-prediction'),
+            topConfidence: document.getElementById('top-confidence'),
+            probMount: document.getElementById('probabilities-mount'),
+            fbInitial: document.getElementById('feedback-initial'),
+            fbCorrection: document.getElementById('fb-correction'),
+            fbYes: document.getElementById('fb-yes'),
+            fbNo: document.getElementById('fb-no'),
+            fbCorrectLabel: document.getElementById('fb-correct-label'),
+            fbSubmit: document.getElementById('fb-submit'),
+            fbThanks: document.getElementById('fb-thanks'),
+            rapidToggle: document.getElementById('rapid-toggle'),
+            hotkeyHint: document.getElementById('hotkey-hint'),
+            statsBtn: document.getElementById('stats-btn'),
+            statsModal: document.getElementById('stats-modal'),
+            closeStats: document.getElementById('close-stats'),
+            statAccuracy: document.getElementById('stat-accuracy'),
+            statTotal: document.getElementById('stat-total'),
+            statsCatList: document.getElementById('stats-cat-list'),
+            statsConfusionList: document.getElementById('stats-confusion-list')
+        };
+
+        const CLASSES = ['drawings', 'hentai', 'neutral', 'porn', 'sexy'];
+
+        function resetUI() {
+            ui.resultContent.style.display = 'none';
+            ui.resultPlaceholder.style.display = 'block';
+            ui.predictBtn.disabled = true;
+            ui.imgPath.innerText = '';
+            ui.fbInitial.style.display = 'flex';
+            ui.fbCorrection.style.display = 'none';
+            ui.fbThanks.style.display = 'none';
+            currentImagePath = null;
+        }
+
+        ui.sourceMode.addEventListener('change', (e) => {
+            const isSeq = e.target.checked || e.target.value === 'sequential';
+            ui.seqCategory.style.display = isSeq ? 'inline-block' : 'none';
+            ui.seqInfo.style.display = isSeq ? 'block' : 'none';
+            ui.nextBtn.innerText = isSeq ? 'Next Image' : 'Pick Random';
+            sequentialOffset = 0; // Reset offset on mode change
+        });
+
+        // Load specific starting offset if needed
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('offset')) {
+            sequentialOffset = parseInt(urlParams.get('offset'));
+            ui.sourceMode.value = 'sequential';
+            ui.seqCategory.style.display = 'inline-block';
+            ui.seqInfo.style.display = 'block';
+            ui.nextBtn.innerText = 'Next Image';
+        }
+
+        ui.statsBtn.addEventListener('click', showStats);
+        ui.closeStats.addEventListener('click', () => ui.statsModal.style.display = 'none');
+        window.onclick = (e) => { if (e.target == ui.statsModal) ui.statsModal.style.display = 'none'; };
+
+        async function showStats() {
+            ui.statsModal.style.display = 'flex';
+            ui.statsCatList.innerHTML = '<p style="color:var(--text-muted); font-size: 0.8rem;">Loading metrics...</p>';
+
+            try {
+                const res = await fetch('/api/feedback_stats');
+                const data = await res.json();
+
+                ui.statAccuracy.innerText = data.accuracy.toFixed(1) + '%';
+                ui.statTotal.innerText = data.total;
+
+                // Categories
+                ui.statsCatList.innerHTML = '';
+                CLASSES.forEach(cat => {
+                    const stats = data.per_category[cat] || { total: 0, correct: 0 };
+                    const acc = stats.total > 0 ? (stats.correct / stats.total * 100).toFixed(1) : 0;
+                    ui.statsCatList.innerHTML += `
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem;">
+                            <span style="width: 80px; font-size: 0.8rem; text-transform: capitalize;">${cat}</span>
+                            <div style="flex: 1; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; position: relative;">
+                                <div style="position: absolute; left: 0; top: 0; height: 100%; width: ${acc}%; background: ${acc > 80 ? 'var(--success)' : acc > 50 ? 'var(--accent)' : 'var(--danger)'}; border-radius: 3px;"></div>
+                            </div>
+                            <span style="font-size: 0.8rem; width: 40px; text-align: right;">${acc}%</span>
+                            <span style="font-size: 0.7rem; color: var(--text-muted); width: 40px;">(${stats.total})</span>
+                        </div>
+                    `;
+                });
+
+                // Confusion
+                ui.statsConfusionList.innerHTML = '';
+                if (data.confusion.length === 0) {
+                    ui.statsConfusionList.innerHTML = 'All predictions match ground truth! 🎯';
+                } else {
+                    data.confusion.slice(0, 5).forEach(m => {
+                        ui.statsConfusionList.innerHTML += `
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; background: rgba(255,0,0,0.05); padding: 5px 10px; border-radius: 6px;">
+                                <span><b>${m.gt}</b> predicted as <b>${m.pred}</b></span>
+                                <span style="color: var(--danger)">${m.count} times</span>
+                            </div>
+                        `;
+                    });
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        // Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => {
+            const key = e.key.toLowerCase();
+
+            // Don't trigger if user is typing in URL input
+            if (document.activeElement.tagName === 'INPUT' && document.activeElement.type === 'text') return;
+
+            if (key === 'r' || key === 'enter') {
+                ui.nextBtn.click();
+            } else if (ui.resultContent.style.display === 'block') {
+                if (key === 'y' || key === ' ') {
+                    ui.fbYes.click();
+                } else if (key === 'n') {
+                    ui.fbNo.click();
+                } else if (['1', '2', '3', '4', '5'].includes(key)) {
+                    const idx = parseInt(key) - 1;
+                    ui.fbNo.click(); // Show correction if not already shown
+                    ui.fbCorrectLabel.selectedIndex = idx;
+                    ui.fbSubmit.click();
+                }
+            }
+        });
+
+        async function fetchNext() {
+            ui.loader.style.display = 'block';
+            resetUI();
+            currentSourceType = 'local';
+
+            const mode = ui.sourceMode.value;
+            let url = '/api/random_image';
+
+            if (mode === 'sequential') {
+                const cat = ui.seqCategory.value;
+                url = `/api/sequential_image?category=${cat}&offset=${sequentialOffset}`;
+            }
+
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+
+                if (data.url) {
+                    ui.preview.src = data.url;
+                    ui.preview.style.display = 'block';
+                    ui.placeholder.style.display = 'none';
+                    ui.placeholderText.style.display = 'none';
+                    ui.imgPath.innerText = "Local path: " + data.path;
+                    currentImagePath = data.path;
+                    ui.predictBtn.disabled = false;
+
+                    if (mode === 'sequential') {
+                        ui.seqCurrent.innerText = data.index + 1;
+                        ui.seqTotal.innerText = data.total;
+                        sequentialOffset = data.index + 1;
+                    }
+
+                    // Auto-classify in rapid mode
+                    if (ui.rapidToggle.checked) {
+                        setTimeout(() => ui.predictBtn.click(), 100);
+                    }
+                } else if (data.error) {
+                    ui.placeholderText.innerText = `⚠️ ${data.error}`;
+                    ui.placeholderText.style.display = 'block';
+                }
+            } catch (e) {
+                console.error(e);
+            }
+            ui.loader.style.display = 'none';
+        }
+
+        ui.nextBtn.addEventListener('click', fetchNext);
+
+        ui.uploadBtn.addEventListener('click', () => ui.fileInput.click());
+
+        ui.fileInput.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            resetUI();
+            currentSourceType = 'upload';
+            ui.loader.style.display = 'block';
+
+            const formData = new FormData();
+            formData.append('image', file);
+
+            try {
+                const res = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await res.json();
+
+                if (data.class) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        ui.preview.src = e.target.result;
+                        ui.preview.style.display = 'block';
+                        ui.placeholder.style.display = 'none';
+                        ui.placeholderText.style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+
+                    ui.imgPath.innerText = "Uploaded: " + file.name;
+                    currentImagePath = file.name;
+                    renderResults(data);
+                }
+            } catch (err) { console.error(err); }
+            ui.loader.style.display = 'none';
+        });
+
+        ui.urlBtn.addEventListener('click', async () => {
+            const url = ui.urlInput.value.trim();
+            if (!url) return;
+
+            resetUI();
+            currentSourceType = 'url';
+            ui.loader.style.display = 'block';
+
+            try {
+                const res = await fetch('/api/classify_url', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: url })
+                });
+                const data = await res.json();
+
+                if (data.class) {
+                    ui.preview.src = url;
+                    ui.preview.style.display = 'block';
+                    ui.placeholder.style.display = 'none';
+                    ui.placeholderText.style.display = 'none';
+                    ui.imgPath.innerText = "URL: " + (url.length > 50 ? url.substring(0, 47) + "..." : url);
+                    currentImagePath = url;
+                    renderResults(data);
+                }
+            } catch (err) { console.error(err); }
+            ui.loader.style.display = 'none';
+        });
+
+        ui.predictBtn.addEventListener('click', async () => {
+            if (!currentImagePath) return;
+
+            ui.loader.style.display = 'block';
+            ui.predictBtn.disabled = true;
+
+            try {
+                const res = await fetch('/api/classify', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ path: currentImagePath })
+                });
+                const data = await res.json();
+                if (data.class) renderResults(data);
+            } catch (e) { console.error(e); }
+
+            ui.loader.style.display = 'none';
+            ui.predictBtn.disabled = false;
+        });
+
+        ui.fbYes.addEventListener('click', () => {
+            const label = ui.topPrediction.innerText.toLowerCase();
+            submitFeedback(label);
+        });
+
+        ui.fbNo.addEventListener('click', () => {
+            ui.fbInitial.style.display = 'none';
+            ui.fbCorrection.style.display = 'block';
+            ui.fbCorrectLabel.value = ui.topPrediction.innerText.toLowerCase();
+        });
+
+        ui.fbSubmit.addEventListener('click', () => {
+            const label = ui.fbCorrectLabel.value;
+            submitFeedback(label);
+        });
+
+        async function submitFeedback(correctLabel) {
+            ui.loader.style.display = 'block';
+            try {
+                const res = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        path: currentImagePath,
+                        correct_label: correctLabel,
+                        orig_pred: currentPrediction,
+                        source_type: currentSourceType
+                    })
+                });
+                const data = await res.json();
+                if (data.status === 'success') {
+                    if (ui.rapidToggle.checked) {
+                        // In rapid mode, pick next immediately
+                        fetchNext();
+                    } else {
+                        ui.fbInitial.style.display = 'none';
+                        ui.fbCorrection.style.display = 'none';
+                        ui.fbThanks.style.display = 'block';
+                    }
+                }
+            } catch (e) { console.error(e); }
+            ui.loader.style.display = 'none';
+        }
+
+        function renderResults(data) {
+            ui.resultPlaceholder.style.display = 'none';
+            ui.resultContent.style.display = 'block';
+
+            currentPrediction = data.class;
+            ui.topPrediction.innerText = data.class;
+            ui.topPrediction.className = `prediction-pill class-${data.class}`;
+            ui.topConfidence.innerText = (data.confidence * 100).toFixed(2) + '%';
+
+            ui.probMount.innerHTML = '';
+            CLASSES.forEach(cl => {
+                const prob = data.probabilities[cl] || 0;
+                const perc = (prob * 100).toFixed(1);
+                ui.probMount.innerHTML += `
+                    <div class="prob-bar-container">
+                        <div class="prob-label">
+                            <span style="text-transform: capitalize;">${cl}</span>
+                            <span>${perc}%</span>
+                        </div>
+                        <div class="prob-track">
+                            <div class="prob-fill" style="width: ${perc}%; background: ${data.class === cl ? 'var(--accent)' : 'rgba(255,255,255,0.1)'}"></div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+
+</html>

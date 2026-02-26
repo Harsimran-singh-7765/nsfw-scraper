@@ -1,0 +1,249 @@
+:root {
+    --bg-color: #000000;
+    --panel-bg: #0A0A0A;
+    --panel-border: #1A1A1A;
+    --text-main: #FFFFFF;
+    --text-muted: #FFFFFF;
+    --accent: #2A85FF;
+    --danger: #FF453A;
+    --success: #32D74B;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--panel-border);
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.status-indicator.active {
+    background-color: var(--success);
+    box-shadow: 0 0 12px rgba(50, 215, 75, 0.4);
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+}
+
+.highlight {
+    color: var(--text-muted);
+    font-weight: 300;
+    margin-left: 4px;
+}
+
+/* Controls */
+.btn {
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.primary {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.btn.primary:hover {
+    background-color: #E0E0E0;
+    transform: translateY(-1px);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid var(--panel-border);
+}
+
+.btn.secondary:hover {
+    border-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#stop-btn {
+    background-color: transparent;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+#stop-btn:hover {
+    background-color: rgba(255, 69, 58, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Current Task Panel */
+.current-task {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.current-task h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.url-display {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    word-break: break-all;
+    margin-bottom: 0.8rem;
+    color: #FFFFFF;
+}
+
+.status-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+section h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Progress Bars */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.cat-label {
+    font-weight: 500;
+}
+
+.cat-value {
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.progress-track {
+    background-color: var(--bg-color);
+    border: 1px solid var(--panel-border);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--text-main);
+    transition: width 0.5s ease-out, background-color 0.3s ease;
+}
+
+/* Terminal */
+.terminal-window {
+    background-color: #000000;
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 500px;
+    overflow-y: auto;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+.terminal-window::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-window::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.terminal-window::-webkit-scrollbar-thumb {
+    background: var(--panel-border);
+    border-radius: 4px;
+}
+
+.log-line {
+    margin-bottom: 2px;
+    word-break: break-all;
+}
+
+@media (max-width: 900px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+}

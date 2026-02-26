@@ -1,0 +1,1675 @@
+nohup: ignoring input
+ * Serving Flask app 'dashboard'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 443-243-139
+127.0.0.1 - - [26/Feb/2026 13:43:20] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:23] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:26] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:29] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:32] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:35] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:38] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:41] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:44] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:47] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:50] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:53] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:56] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:43:59] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:02] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:04] "POST /api/auto_ingest HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:04] "GET /ingest_stream HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:05] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:08] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:11] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:14] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:17] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:20] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:23] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:26] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:26] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_0.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:44:26] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_4.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:44:26] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_3.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:44:27] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_2.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:44:28] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_1.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:44:29] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:32] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:33] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_9.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:44:35] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_7.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:44:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_6.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:44:38] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:41] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:44] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:47] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:50] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:53] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:56] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:59] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:44:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_5.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:00] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_11.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:00] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_13.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:01] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_14.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:02] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:02] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_16.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:02] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_2.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:03] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_17.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:04] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_12.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_19.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:04] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_9.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:05] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:07] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_20.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:08] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_15.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_18_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_18_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_18_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_18_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_18_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_10.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_21.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_22.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:12] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_23.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:12] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_26.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:12] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_25.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:12] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_27.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:12] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_24.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:12] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_31.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:13] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_28.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:14] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:15] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_33.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:15] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_29.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:15] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_32.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:15] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_30.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:16] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_34.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:17] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_36.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:17] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_37.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:17] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_38.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:18] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_40.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:18] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_42.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:19] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_43.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:20] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:21] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_44.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:23] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:23] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_41.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:24] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:24] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:24] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:24] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_35_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:24] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:25] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_35_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:26] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:26] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:26] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:26] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:26] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_45.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:28] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:28] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:28] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:28] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:28] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_49.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_8_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_48.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_47.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_50.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_52.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:30] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_51.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:31] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_53.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:31] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_46.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:31] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_54.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:31] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_56.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:31] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_55.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:31] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_58.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_028.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_57_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_029.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_57_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_025.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_022.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:32] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_35_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_57_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_57_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_021.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_57_020.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_027.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_024.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:33] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_57_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_023.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_57_026.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_019.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_57_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_61.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_64.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:34] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_59.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:35] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:35] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_63.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:35] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_60.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_66.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:35] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_67.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_70.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_68.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:36] "[33mGET /raw/hentai/IMAGES/auto_1772093644_dl_69.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:36] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_71.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_57_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_72.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:38] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:38] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_74.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:38] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_62.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:41] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_030.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_65_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_034.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_024.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_022.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_031.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_029.jpg HTTP/1.1[0m" 404 -
+🚀 Initializing NSFW Classifier (Model: resnet50)...
+✅ SUCCESS: Loaded model weights from 'best_model.pth'
+📊 Model classes: ['drawings', 'hentai', 'neutral', 'porn', 'sexy']
+🔮 Prediction for dl_0.jpeg: porn (90.01%)
+🔮 Prediction for dl_4.jpeg: porn (81.74%)
+🔮 Prediction for dl_3.jpg: porn (87.57%)
+🔮 Prediction for dl_2.jpg: porn (98.00%)
+🔮 Prediction for dl_1.jpeg: neutral (78.67%)
+🔮 Prediction for dl_9.jpeg: neutral (67.41%)
+🔮 Prediction for dl_7.jpg: porn (80.02%)
+🔮 Prediction for dl_6.jpg: porn (70.85%)
+🔮 Prediction for dl_5.png: porn (54.67%)
+🔮 Prediction for dl_11.jpg: porn (92.29%)
+🔮 Prediction for dl_13.jpeg: neutral (80.08%)
+🔮 Prediction for dl_14.jpg: porn (69.95%)
+🔮 Prediction for dl_16.jpg: porn (59.92%)
+🔮 Prediction for dl_17.jpeg: porn (63.37%)
+🔮 Prediction for dl_12.jpg: neutral (95.46%)
+🔮 Prediction for dl_19.jpeg: porn (61.84%)
+🔮 Prediction for dl_20.jpg: sexy (62.57%)
+🔮 Prediction for dl_15.jpg: porn (58.00%)
+🔮 Prediction for frame_dl_18_001.jpg: porn (97.87%)
+🔮 Prediction for frame_dl_18_003.jpg: porn (82.11%)
+🔮 Prediction for frame_dl_18_005.jpg: porn (98.41%)
+🔮 Prediction for frame_dl_18_002.jpg: porn (98.15%)
+🔮 Prediction for frame_dl_18_004.jpg: porn (90.12%)
+🔮 Prediction for dl_10.jpeg: porn (98.98%)
+🔮 Prediction for dl_21.jpg: porn (96.24%)
+🔮 Prediction for dl_22.jpg: porn (99.72%)
+🔮 Prediction for dl_23.jpg: sexy (90.36%)
+🔮 Prediction for dl_25.jpg: neutral (71.23%)
+🔮 Prediction for dl_26.jpeg: neutral (53.20%)
+🔮 Prediction for dl_27.jpeg: sexy (98.77%)
+🔮 Prediction for dl_24.jpeg: sexy (96.92%)
+🔮 Prediction for dl_31.jpeg: neutral (79.86%)
+🔮 Prediction for dl_28.jpeg: neutral (96.09%)
+🔮 Prediction for dl_33.jpg: porn (56.66%)
+🔮 Prediction for dl_29.jpg: neutral (92.74%)
+🔮 Prediction for dl_32.jpg: neutral (71.30%)
+🔮 Prediction for dl_30.jpg: porn (63.31%)
+🔮 Prediction for dl_34.jpeg: porn (80.19%)
+🔮 Prediction for dl_36.jpg: porn (68.40%)
+🔮 Prediction for dl_37.jpg: sexy (95.95%)
+🔮 Prediction for dl_38.jpg: sexy (71.93%)
+🔮 Prediction for dl_40.png: sexy (66.29%)
+🔮 Prediction for dl_42.jpg: neutral (91.21%)
+🔮 Prediction for dl_43.jpg: neutral (62.08%)
+🔮 Prediction for dl_44.jpg: porn (83.26%)
+🔮 Prediction for dl_41.jpg: neutral (83.57%)
+🔮 Prediction for frame_dl_35_001.jpg: neutral (97.20%)
+🔮 Prediction for frame_dl_35_009.jpg: neutral (96.48%)
+🔮 Prediction for frame_dl_35_011.jpg: neutral (68.21%)
+🔮 Prediction for frame_dl_35_014.jpg: neutral (65.85%)
+🔮 Prediction for frame_dl_35_005.jpg: sexy (37.33%)
+🔮 Prediction for frame_dl_35_006.jpg: neutral (48.64%)
+🔮 Prediction for frame_dl_35_010.jpg: neutral (93.76%)
+🔮 Prediction for frame_dl_35_002.jpg: neutral (95.38%)
+🔮 Prediction for frame_dl_35_017.jpg: neutral (69.47%)
+🔮 Prediction for frame_dl_35_008.jpg: neutral (77.79%)
+🔮 Prediction for frame_dl_35_004.jpg: sexy (48.84%)
+🔮 Prediction for frame_dl_35_015.jpg: neutral (57.52%)
+🔮 Prediction for frame_dl_35_013.jpg: neutral (93.12%)
+🔮 Prediction for frame_dl_35_003.jpg: neutral (47.90%)
+🔮 Prediction for frame_dl_35_016.jpg: neutral (46.74%)
+🔮 Prediction for frame_dl_35_012.jpg: neutral (89.09%)
+🔮 Prediction for frame_dl_35_018.jpg: neutral (82.06%)
+🔮 Prediction for frame_dl_35_007.jpg: neutral (50.03%)
+🔮 Prediction for dl_45.jpeg: porn (84.33%)
+🔮 Prediction for frame_dl_8_007.jpg: porn (83.33%)
+🔮 Prediction for frame_dl_8_003.jpg: porn (90.58%)
+🔮 Prediction for frame_dl_8_010.jpg: porn (91.33%)
+🔮 Prediction for frame_dl_8_013.jpg: porn (81.61%)
+🔮 Prediction for frame_dl_8_016.jpg: porn (86.47%)
+🔮 Prediction for frame_dl_8_004.jpg: porn (90.21%)
+🔮 Prediction for frame_dl_8_001.jpg: porn (81.95%)
+🔮 Prediction for frame_dl_8_008.jpg: porn (83.64%)
+🔮 Prediction for frame_dl_8_005.jpg: porn (93.66%)
+🔮 Prediction for frame_dl_8_006.jpg: porn (95.49%)
+🔮 Prediction for frame_dl_8_014.jpg: porn (85.89%)
+🔮 Prediction for frame_dl_8_011.jpg: porn (97.41%)
+🔮 Prediction for frame_dl_8_015.jpg: porn (95.95%)
+🔮 Prediction for frame_dl_8_009.jpg: porn (96.21%)
+🔮 Prediction for frame_dl_8_002.jpg: porn (70.72%)
+🔮 Prediction for frame_dl_8_012.jpg: porn (89.47%)
+🔮 Prediction for dl_49.jpg: sexy (72.55%)
+🔮 Prediction for dl_48.png: neutral (60.78%)
+🔮 Prediction for dl_47.jpg: porn (69.73%)
+🔮 Prediction for dl_50.jpg: neutral (71.00%)
+🔮 Prediction for dl_52.jpg: neutral (58.39%)
+🔮 Prediction for dl_51.jpeg: sexy (86.78%)
+🔮 Prediction for dl_53.jpg: porn (96.38%)
+🔮 Prediction for dl_46.jpg: sexy (94.52%)
+🔮 Prediction for dl_54.jpg: neutral (56.02%)
+🔮 Prediction for dl_56.jpeg: porn (73.93%)
+🔮 Prediction for dl_55.jpg: porn (89.57%)
+🔮 Prediction for dl_58.jpg: neutral (50.50%)
+🔮 Prediction for frame_dl_57_009.jpg: neutral (69.81%)
+🔮 Prediction for frame_dl_57_028.jpg: sexy (45.78%)
+🔮 Prediction for frame_dl_57_016.jpg: porn (53.80%)
+🔮 Prediction for frame_dl_57_029.jpg: neutral (50.91%)
+🔮 Prediction for frame_dl_57_002.jpg: sexy (49.99%)
+🔮 Prediction for frame_dl_57_006.jpg: neutral (45.18%)
+🔮 Prediction for frame_dl_57_017.jpg: porn (65.51%)
+🔮 Prediction for frame_dl_57_025.jpg: neutral (61.50%)
+🔮 Prediction for frame_dl_57_022.jpg: sexy (57.76%)
+🔮 Prediction for frame_dl_57_011.jpg: porn (53.28%)
+🔮 Prediction for frame_dl_57_010.jpg: sexy (45.14%)
+🔮 Prediction for frame_dl_57_001.jpg: porn (52.57%)
+🔮 Prediction for frame_dl_57_008.jpg: sexy (53.77%)
+🔮 Prediction for frame_dl_57_021.jpg: sexy (46.75%)
+🔮 Prediction for frame_dl_57_020.jpg: porn (44.69%)
+🔮 Prediction for frame_dl_57_027.jpg: sexy (36.21%)
+🔮 Prediction for frame_dl_57_024.jpg: sexy (67.15%)
+🔮 Prediction for frame_dl_57_012.jpg: sexy (66.01%)
+🔮 Prediction for frame_dl_57_015.jpg: neutral (49.36%)
+🔮 Prediction for frame_dl_57_014.jpg: neutral (62.27%)
+🔮 Prediction for frame_dl_57_003.jpg: neutral (72.79%)
+🔮 Prediction for frame_dl_57_018.jpg: porn (53.66%)
+🔮 Prediction for frame_dl_57_013.jpg: neutral (55.64%)
+🔮 Prediction for frame_dl_57_007.jpg: neutral (61.08%)
+🔮 Prediction for frame_dl_57_023.jpg: sexy (60.97%)
+🔮 Prediction for frame_dl_57_005.jpg: sexy (55.36%)
+🔮 Prediction for frame_dl_57_026.jpg: neutral (53.03%)
+🔮 Prediction for frame_dl_57_019.jpg: sexy (40.75%)
+🔮 Prediction for frame_dl_57_004.jpg: sexy (51.26%)
+🔮 Prediction for dl_59.png: neutral (76.86%)
+🔮 Prediction for dl_61.jpg: neutral (96.20%)
+🔮 Prediction for dl_64.jpeg: neutral (83.48%)
+🔮 Prediction for dl_63.jpeg: sexy (93.26%)
+🔮 Prediction for dl_60.jpg: neutral (78.47%)
+🔮 Prediction for dl_66.jpg: porn (79.88%)
+🔮 Prediction for dl_67.jpg: neutral (84.50%)
+🔮 Prediction for dl_68.jpg: porn (59.94%)
+🔮 Prediction for dl_70.jpg: porn (93.90%)
+🔮 Prediction for dl_69.jpg: hentai (99.92%)
+🔮 Prediction for dl_71.png: sexy (57.97%)
+🔮 Prediction for dl_72.jpg: porn (99.29%)
+🔮 Prediction for dl_74.jpg: porn (65.80%)
+🔮 Prediction for dl_62.jpeg: porn (56.85%)
+🔮 Prediction for frame_dl_65_018.jpg: porn (92.37%)
+🔮 Prediction for frame_dl_65_012.jpg: porn (91.41%)
+🔮 Prediction for frame_dl_65_017.jpg: porn (91.55%)
+🔮 Prediction for frame_dl_65_015.jpg: porn (81.28%)
+🔮 Prediction for frame_dl_65_030.jpg: porn (88.70%)
+🔮 Prediction for frame_dl_65_014.jpg: porn (91.19%)
+🔮 Prediction for frame_dl_65_005.jpg: neutral (66.52%)
+🔮 Prediction for frame_dl_65_034.jpg: porn (78.34%)
+🔮 Prediction for frame_dl_65_016.jpg: porn (90.34%)
+🔮 Prediction for frame_dl_65_024.jpg: porn (94.44%)
+🔮 Prediction for frame_dl_65_007.jpg: porn (92.62%)
+🔮 Prediction for frame_dl_65_022.jpg: porn (96.65%)
+🔮 Prediction for frame_dl_65_008.jpg: porn (89.82%)
+🔮 Prediction for frame_dl_65_031.jpg: porn (95.96%)
+🔮 Prediction for frame_dl_65_029.jpg: porn (90.36%)
+🔮 Prediction for frame_dl_65_035.jpg: porn (76.74%)
+🔮 Prediction for frame_dl_65_041.jpg: porn (98.93%)
+🔮 Prediction for frame_dl_65_036.jpg: porn (68.87%)
+🔮 Prediction for frame_dl_65_003.jpg: porn (93.14%)
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_035.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_036.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_041.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_044.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_039.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_037.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_025.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_027.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_023.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_042.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:46] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_65_038.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_028.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_026.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_040.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_033.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_021.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_032.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_043.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_019.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_020.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_76.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_65_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:47] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_73.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:48] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_78.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:48] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_79.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:48] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_80.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:48] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_77.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:48] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_82.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:48] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_84.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:48] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_75.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:49] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_83.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:49] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_85.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:49] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_86.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:49] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_91.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:49] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_89.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:49] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_88.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:49] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_92.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:50] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:50] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_81.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:50] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_90.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:53] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:53] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:54] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_87_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:54] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_87_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:54] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:54] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:54] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:54] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:54] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:54] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:55] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:55] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:55] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:55] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_87_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:55] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:56] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:56] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_87_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:56] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_020.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:56] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:56] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:57] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_019.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:57] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_87_021.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:57] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_87_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:57] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_95.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_96.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:58] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_94_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:58] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_94_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:59] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:45:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_94_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_94_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_94_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_94_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_98.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:45:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_99.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:02] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:03] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:03] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_029.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:03] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_027.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_051.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_047.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_031.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_037.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_39_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_049.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:05] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:05] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:05] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_034.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:05] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_039.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:05] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:05] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_030.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:05] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_021.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_032.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_040.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_050.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_044.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:07] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_052.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:07] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_022.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:07] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:07] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_019.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:07] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:07] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_046.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:07] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_043.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_045.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_036.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_033.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_023.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_028.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_39_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_024.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:08] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_038.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_035.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_053.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_041.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_042.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:09] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_048.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:10] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_026.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:10] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_025.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:10] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:10] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_39_020.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:10] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_101.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:10] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_100.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:11] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_103.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_102.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:11] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_104.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:12] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_105.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:12] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_106.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:12] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_108.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:12] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_107.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:12] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_109.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:13] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_112.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:13] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_113.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:13] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_111.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:14] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:15] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_115.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:17] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:17] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_116.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:20] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:21] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:22] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:22] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_97_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:22] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:22] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:22] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:22] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_97_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:23] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:23] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:23] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_97_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:23] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_009.jpg HTTP/1.1[0m" 404 -
+🔮 Prediction for frame_dl_65_044.jpg: porn (98.25%)
+🔮 Prediction for frame_dl_65_002.jpg: porn (49.99%)
+🔮 Prediction for frame_dl_65_039.jpg: porn (97.88%)
+🔮 Prediction for frame_dl_65_006.jpg: porn (85.40%)
+🔮 Prediction for frame_dl_65_037.jpg: porn (66.08%)
+🔮 Prediction for frame_dl_65_025.jpg: porn (97.83%)
+🔮 Prediction for frame_dl_65_027.jpg: porn (94.81%)
+🔮 Prediction for frame_dl_65_023.jpg: porn (74.20%)
+🔮 Prediction for frame_dl_65_042.jpg: porn (99.15%)
+🔮 Prediction for frame_dl_65_001.jpg: porn (61.39%)
+🔮 Prediction for frame_dl_65_009.jpg: porn (95.86%)
+🔮 Prediction for frame_dl_65_038.jpg: neutral (58.00%)
+🔮 Prediction for frame_dl_65_028.jpg: porn (95.75%)
+🔮 Prediction for frame_dl_65_013.jpg: porn (87.26%)
+🔮 Prediction for frame_dl_65_026.jpg: porn (96.37%)
+🔮 Prediction for frame_dl_65_040.jpg: porn (97.28%)
+🔮 Prediction for frame_dl_65_021.jpg: porn (89.55%)
+🔮 Prediction for frame_dl_65_033.jpg: porn (93.54%)
+🔮 Prediction for frame_dl_65_010.jpg: porn (90.47%)
+🔮 Prediction for frame_dl_65_032.jpg: porn (94.75%)
+🔮 Prediction for frame_dl_65_043.jpg: porn (99.18%)
+🔮 Prediction for frame_dl_65_019.jpg: porn (89.91%)
+🔮 Prediction for frame_dl_65_004.jpg: porn (62.20%)
+🔮 Prediction for frame_dl_65_020.jpg: porn (81.21%)
+🔮 Prediction for frame_dl_65_011.jpg: porn (50.19%)
+🔮 Prediction for dl_76.jpeg: porn (51.83%)
+🔮 Prediction for dl_73.jpeg: porn (99.74%)
+🔮 Prediction for dl_77.jpg: neutral (94.19%)
+🔮 Prediction for dl_78.jpg: neutral (68.76%)
+🔮 Prediction for dl_79.jpg: neutral (92.30%)
+🔮 Prediction for dl_80.jpeg: porn (68.74%)
+🔮 Prediction for dl_82.jpg: porn (69.49%)
+🔮 Prediction for dl_84.jpeg: sexy (87.50%)
+🔮 Prediction for dl_75.jpg: neutral (56.99%)
+🔮 Prediction for dl_83.jpeg: neutral (99.03%)
+🔮 Prediction for dl_85.jpg: porn (70.11%)
+🔮 Prediction for dl_86.jpeg: neutral (67.98%)
+🔮 Prediction for dl_88.jpg: porn (99.41%)
+🔮 Prediction for dl_89.jpeg: porn (90.83%)
+🔮 Prediction for dl_91.jpeg: porn (53.26%)
+🔮 Prediction for dl_92.jpg: porn (88.70%)
+🔮 Prediction for dl_81.jpg: porn (77.49%)
+🔮 Prediction for dl_90.jpeg: sexy (96.03%)
+🔮 Prediction for frame_dl_87_011.jpg: porn (68.81%)
+🔮 Prediction for frame_dl_87_017.jpg: sexy (62.82%)
+🔮 Prediction for frame_dl_87_018.jpg: sexy (51.89%)
+🔮 Prediction for frame_dl_87_012.jpg: porn (72.05%)
+🔮 Prediction for frame_dl_87_006.jpg: porn (91.50%)
+🔮 Prediction for frame_dl_87_014.jpg: porn (60.93%)
+🔮 Prediction for frame_dl_87_004.jpg: porn (86.07%)
+🔮 Prediction for frame_dl_87_016.jpg: porn (46.01%)
+🔮 Prediction for frame_dl_87_005.jpg: porn (98.32%)
+🔮 Prediction for frame_dl_87_015.jpg: porn (81.64%)
+🔮 Prediction for frame_dl_87_007.jpg: porn (80.48%)
+🔮 Prediction for frame_dl_87_008.jpg: porn (92.39%)
+🔮 Prediction for frame_dl_87_002.jpg: sexy (86.70%)
+🔮 Prediction for frame_dl_87_010.jpg: porn (75.63%)
+🔮 Prediction for frame_dl_87_003.jpg: sexy (77.55%)
+🔮 Prediction for frame_dl_87_020.jpg: porn (93.87%)
+🔮 Prediction for frame_dl_87_009.jpg: porn (78.31%)
+🔮 Prediction for frame_dl_87_013.jpg: porn (65.03%)
+🔮 Prediction for frame_dl_87_019.jpg: porn (92.58%)
+🔮 Prediction for frame_dl_87_021.jpg: porn (75.98%)
+🔮 Prediction for frame_dl_87_001.jpg: sexy (85.25%)
+🔮 Prediction for dl_95.jpg: porn (53.34%)
+🔮 Prediction for dl_96.jpg: neutral (96.79%)
+🔮 Prediction for frame_dl_94_005.jpg: porn (89.28%)
+🔮 Prediction for frame_dl_94_003.jpg: porn (91.94%)
+🔮 Prediction for frame_dl_94_002.jpg: porn (96.35%)
+🔮 Prediction for frame_dl_94_004.jpg: porn (89.70%)
+🔮 Prediction for frame_dl_94_001.jpg: porn (95.50%)
+🔮 Prediction for frame_dl_94_006.jpg: porn (93.25%)
+🔮 Prediction for dl_98.jpg: porn (50.63%)
+🔮 Prediction for dl_99.jpg: porn (82.26%)
+🔮 Prediction for frame_dl_39_006.jpg: porn (62.73%)
+🔮 Prediction for frame_dl_39_017.jpg: porn (76.99%)
+🔮 Prediction for frame_dl_39_029.jpg: porn (91.80%)
+🔮 Prediction for frame_dl_39_027.jpg: porn (81.39%)
+🔮 Prediction for frame_dl_39_051.jpg: porn (73.21%)
+🔮 Prediction for frame_dl_39_013.jpg: porn (71.69%)
+🔮 Prediction for frame_dl_39_047.jpg: porn (93.81%)
+🔮 Prediction for frame_dl_39_031.jpg: porn (87.64%)
+🔮 Prediction for frame_dl_39_037.jpg: porn (89.53%)
+🔮 Prediction for frame_dl_39_012.jpg: sexy (42.29%)
+🔮 Prediction for frame_dl_39_049.jpg: porn (87.81%)
+🔮 Prediction for frame_dl_39_009.jpg: porn (76.16%)
+🔮 Prediction for frame_dl_39_004.jpg: porn (45.57%)
+🔮 Prediction for frame_dl_39_034.jpg: porn (96.17%)
+🔮 Prediction for frame_dl_39_039.jpg: porn (93.73%)
+🔮 Prediction for frame_dl_39_016.jpg: porn (85.66%)
+🔮 Prediction for frame_dl_39_030.jpg: porn (95.48%)
+🔮 Prediction for frame_dl_39_021.jpg: porn (90.42%)
+🔮 Prediction for frame_dl_39_032.jpg: porn (94.14%)
+🔮 Prediction for frame_dl_39_008.jpg: porn (75.95%)
+🔮 Prediction for frame_dl_39_011.jpg: porn (75.55%)
+🔮 Prediction for frame_dl_39_040.jpg: porn (89.56%)
+🔮 Prediction for frame_dl_39_050.jpg: porn (88.70%)
+🔮 Prediction for frame_dl_39_001.jpg: porn (52.65%)
+🔮 Prediction for frame_dl_39_015.jpg: porn (79.91%)
+🔮 Prediction for frame_dl_39_044.jpg: porn (77.91%)
+🔮 Prediction for frame_dl_39_052.jpg: porn (79.33%)
+🔮 Prediction for frame_dl_39_022.jpg: porn (93.09%)
+🔮 Prediction for frame_dl_39_007.jpg: porn (65.00%)
+🔮 Prediction for frame_dl_39_019.jpg: porn (91.26%)
+🔮 Prediction for frame_dl_39_014.jpg: porn (65.43%)
+🔮 Prediction for frame_dl_39_046.jpg: porn (90.61%)
+🔮 Prediction for frame_dl_39_043.jpg: porn (84.02%)
+🔮 Prediction for frame_dl_39_023.jpg: porn (86.08%)
+🔮 Prediction for frame_dl_39_033.jpg: porn (83.46%)
+🔮 Prediction for frame_dl_39_036.jpg: porn (88.77%)
+🔮 Prediction for frame_dl_39_045.jpg: porn (87.27%)
+🔮 Prediction for frame_dl_39_002.jpg: neutral (64.95%)
+🔮 Prediction for frame_dl_39_024.jpg: porn (86.14%)
+🔮 Prediction for frame_dl_39_028.jpg: porn (93.80%)
+🔮 Prediction for frame_dl_39_005.jpg: porn (63.95%)
+🔮 Prediction for frame_dl_39_018.jpg: porn (90.45%)
+🔮 Prediction for frame_dl_39_038.jpg: porn (83.64%)
+🔮 Prediction for frame_dl_39_003.jpg: porn (64.23%)
+🔮 Prediction for frame_dl_39_035.jpg: porn (86.56%)
+🔮 Prediction for frame_dl_39_053.jpg: porn (93.43%)
+🔮 Prediction for frame_dl_39_041.jpg: porn (83.83%)
+🔮 Prediction for frame_dl_39_048.jpg: porn (92.39%)
+🔮 Prediction for frame_dl_39_042.jpg: porn (68.74%)
+🔮 Prediction for frame_dl_39_026.jpg: porn (92.92%)
+🔮 Prediction for frame_dl_39_025.jpg: porn (95.40%)
+🔮 Prediction for frame_dl_39_010.jpg: porn (92.29%)
+🔮 Prediction for frame_dl_39_020.jpg: porn (91.61%)
+🔮 Prediction for dl_101.jpg: neutral (90.14%)
+🔮 Prediction for dl_100.jpg: porn (84.50%)
+🔮 Prediction for dl_103.jpg: porn (69.57%)
+🔮 Prediction for dl_102.jpg: porn (45.15%)
+🔮 Prediction for dl_104.jpg: porn (89.78%)
+🔮 Prediction for dl_105.jpg: porn (58.71%)
+🔮 Prediction for dl_106.jpg: porn (76.70%)
+🔮 Prediction for dl_108.jpg: neutral (76.78%)
+🔮 Prediction for dl_107.jpg: porn (54.20%)
+🔮 Prediction for dl_109.jpg: sexy (40.15%)
+🔮 Prediction for dl_112.jpg: neutral (85.52%)
+🔮 Prediction for dl_113.jpeg: sexy (73.12%)
+🔮 Prediction for dl_111.jpg: neutral (68.29%)
+🔮 Prediction for dl_115.jpg: neutral (67.44%)
+🔮 Prediction for dl_116.jpg: neutral (89.87%)
+🔮 Prediction for frame_dl_97_010.jpg: porn (62.52%)
+🔮 Prediction for frame_dl_97_014.jpg: porn (96.10%)
+🔮 Prediction for frame_dl_97_001.jpg: neutral (63.65%)
+🔮 Prediction for frame_dl_97_011.jpg: porn (90.60%)
+🔮 Prediction for frame_dl_97_012.jpg: porn (92.15%)
+🔮 Prediction for frame_dl_97_013.jpg: porn (92.40%)
+🔮 Prediction for frame_dl_97_003.jpg: neutral (71.88%)
+🔮 Prediction for frame_dl_97_007.jpg: porn (89.67%)
+🔮 Prediction for frame_dl_97_004.jpg: neutral (92.55%)
+🔮 Prediction for frame_dl_97_009.jpg: porn (72.64%)
+🔮 Prediction for frame_dl_97_006.jpg: neutral (53.53%)
+🔮 Prediction for frame_dl_97_002.jpg: porn (56.52%)
+127.0.0.1 - - [26/Feb/2026 13:46:23] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_97_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:23] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:23] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_97_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:24] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_97_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:25] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_110_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:25] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:25] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_110_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:26] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:26] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:26] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:26] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:26] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:26] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:27] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:27] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_110_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:27] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_117.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:27] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_118.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:28] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_119.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:28] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_120.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:28] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_122.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:46:29] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:32] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:35] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:38] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:41] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:44] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:47] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:50] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:53] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:56] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:46:59] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:02] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:05] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:08] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:11] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:14] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:16] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_027.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:16] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_024.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_036.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_034.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_045.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_031.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_019.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_029.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:17] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_040.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_039.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_041.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_030.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_026.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_044.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_035.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_020.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_038.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:18] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_043.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_028.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_048.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_037.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_022.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_021.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_023.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:19] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_025.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_033.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_047.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_046.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_032.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_049.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_114_042.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:20] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_123_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_123_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:21] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:22] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:22] "[33mGET /raw/drawings/IMAGES/auto_1772093644_frame_dl_123_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:22] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_126.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:23] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:24] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_127.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:26] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:26] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_93_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:26] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_93_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:26] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_93_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:26] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_93_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:27] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_93_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:27] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_93_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:27] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_93_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:27] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_93_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:29] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:29] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_129.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:30] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_128.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:32] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:34] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_121_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_021.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:35] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_022.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:35] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_121_020.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_023.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_121_019.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:36] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_121_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:37] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_121_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:37] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_132.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:37] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_131.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:38] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:38] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_133.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:39] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:39] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_054.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:39] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:39] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_021.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:39] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:39] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_037.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_057.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_056.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_032.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_031.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_059.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:40] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_058.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_033.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_040.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_028.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_042.jpg HTTP/1.1[0m" 404 -
+🔮 Prediction for frame_dl_97_008.jpg: porn (84.00%)
+🔮 Prediction for frame_dl_97_005.jpg: neutral (74.04%)
+🔮 Prediction for frame_dl_110_010.jpg: neutral (80.63%)
+🔮 Prediction for frame_dl_110_004.jpg: porn (71.01%)
+🔮 Prediction for frame_dl_110_008.jpg: neutral (76.32%)
+🔮 Prediction for frame_dl_110_002.jpg: neutral (53.91%)
+🔮 Prediction for frame_dl_110_007.jpg: neutral (67.73%)
+🔮 Prediction for frame_dl_110_009.jpg: sexy (72.77%)
+🔮 Prediction for frame_dl_110_011.jpg: neutral (77.24%)
+🔮 Prediction for frame_dl_110_013.jpg: neutral (95.36%)
+🔮 Prediction for frame_dl_110_012.jpg: neutral (72.51%)
+🔮 Prediction for frame_dl_110_005.jpg: neutral (71.64%)
+🔮 Prediction for frame_dl_110_003.jpg: neutral (60.64%)
+🔮 Prediction for frame_dl_110_006.jpg: neutral (80.69%)
+🔮 Prediction for frame_dl_110_001.jpg: neutral (59.52%)
+🔮 Prediction for dl_117.jpeg: porn (77.16%)
+🔮 Prediction for dl_118.jpeg: porn (55.96%)
+🔮 Prediction for dl_119.jpeg: porn (33.65%)
+🔮 Prediction for dl_120.jpg: neutral (57.42%)
+🔮 Prediction for dl_122.jpg: sexy (72.52%)
+🔮 Prediction for frame_dl_114_027.jpg: porn (98.88%)
+🔮 Prediction for frame_dl_114_024.jpg: porn (99.05%)
+🔮 Prediction for frame_dl_114_036.jpg: porn (99.44%)
+🔮 Prediction for frame_dl_114_034.jpg: porn (98.31%)
+🔮 Prediction for frame_dl_114_009.jpg: porn (99.45%)
+🔮 Prediction for frame_dl_114_006.jpg: porn (98.19%)
+🔮 Prediction for frame_dl_114_018.jpg: porn (98.66%)
+🔮 Prediction for frame_dl_114_045.jpg: porn (99.61%)
+🔮 Prediction for frame_dl_114_031.jpg: porn (98.61%)
+🔮 Prediction for frame_dl_114_010.jpg: porn (98.42%)
+🔮 Prediction for frame_dl_114_019.jpg: porn (97.85%)
+🔮 Prediction for frame_dl_114_029.jpg: porn (99.71%)
+🔮 Prediction for frame_dl_114_011.jpg: porn (98.47%)
+🔮 Prediction for frame_dl_114_017.jpg: porn (98.18%)
+🔮 Prediction for frame_dl_114_040.jpg: porn (98.97%)
+🔮 Prediction for frame_dl_114_026.jpg: porn (95.05%)
+🔮 Prediction for frame_dl_114_030.jpg: porn (97.70%)
+🔮 Prediction for frame_dl_114_039.jpg: porn (99.36%)
+🔮 Prediction for frame_dl_114_015.jpg: porn (99.06%)
+🔮 Prediction for frame_dl_114_041.jpg: porn (98.47%)
+🔮 Prediction for frame_dl_114_035.jpg: porn (98.89%)
+🔮 Prediction for frame_dl_114_044.jpg: porn (99.05%)
+🔮 Prediction for frame_dl_114_016.jpg: porn (98.65%)
+🔮 Prediction for frame_dl_114_020.jpg: porn (99.46%)
+🔮 Prediction for frame_dl_114_002.jpg: porn (94.38%)
+🔮 Prediction for frame_dl_114_038.jpg: porn (99.21%)
+🔮 Prediction for frame_dl_114_007.jpg: porn (99.34%)
+🔮 Prediction for frame_dl_114_043.jpg: porn (97.32%)
+🔮 Prediction for frame_dl_114_028.jpg: porn (98.56%)
+🔮 Prediction for frame_dl_114_003.jpg: porn (93.60%)
+🔮 Prediction for frame_dl_114_048.jpg: porn (99.50%)
+🔮 Prediction for frame_dl_114_004.jpg: porn (91.84%)
+🔮 Prediction for frame_dl_114_012.jpg: porn (94.75%)
+🔮 Prediction for frame_dl_114_037.jpg: porn (99.14%)
+🔮 Prediction for frame_dl_114_022.jpg: porn (99.02%)
+🔮 Prediction for frame_dl_114_013.jpg: porn (99.24%)
+🔮 Prediction for frame_dl_114_021.jpg: porn (97.31%)
+🔮 Prediction for frame_dl_114_023.jpg: porn (99.08%)
+🔮 Prediction for frame_dl_114_014.jpg: porn (96.96%)
+🔮 Prediction for frame_dl_114_025.jpg: porn (98.86%)
+🔮 Prediction for frame_dl_114_008.jpg: porn (99.02%)
+🔮 Prediction for frame_dl_114_047.jpg: porn (98.63%)
+🔮 Prediction for frame_dl_114_001.jpg: porn (95.98%)
+🔮 Prediction for frame_dl_114_033.jpg: porn (98.99%)
+🔮 Prediction for frame_dl_114_005.jpg: porn (97.47%)
+🔮 Prediction for frame_dl_114_046.jpg: porn (98.90%)
+🔮 Prediction for frame_dl_114_032.jpg: porn (99.13%)
+🔮 Prediction for frame_dl_114_049.jpg: porn (99.37%)
+🔮 Prediction for frame_dl_114_042.jpg: porn (98.41%)
+🔮 Prediction for frame_dl_123_007.jpg: drawings (90.50%)
+🔮 Prediction for frame_dl_123_010.jpg: drawings (91.23%)
+🔮 Prediction for frame_dl_123_012.jpg: drawings (92.38%)
+🔮 Prediction for frame_dl_123_005.jpg: drawings (97.31%)
+🔮 Prediction for frame_dl_123_003.jpg: drawings (64.42%)
+🔮 Prediction for frame_dl_123_004.jpg: drawings (97.56%)
+🔮 Prediction for frame_dl_123_002.jpg: neutral (66.62%)
+🔮 Prediction for frame_dl_123_013.jpg: drawings (78.40%)
+🔮 Prediction for frame_dl_123_001.jpg: neutral (92.91%)
+🔮 Prediction for frame_dl_123_006.jpg: drawings (89.82%)
+🔮 Prediction for frame_dl_123_009.jpg: drawings (92.97%)
+🔮 Prediction for frame_dl_123_008.jpg: drawings (95.06%)
+🔮 Prediction for frame_dl_123_014.jpg: drawings (70.59%)
+🔮 Prediction for frame_dl_123_011.jpg: drawings (95.07%)
+🔮 Prediction for dl_126.jpg: neutral (42.75%)
+🔮 Prediction for dl_127.jpeg: porn (79.72%)
+🔮 Prediction for frame_dl_93_002.jpg: porn (72.09%)
+🔮 Prediction for frame_dl_93_006.jpg: porn (97.35%)
+🔮 Prediction for frame_dl_93_005.jpg: porn (92.09%)
+🔮 Prediction for frame_dl_93_003.jpg: porn (89.11%)
+🔮 Prediction for frame_dl_93_004.jpg: porn (94.16%)
+🔮 Prediction for frame_dl_93_007.jpg: porn (96.34%)
+🔮 Prediction for frame_dl_93_008.jpg: porn (98.77%)
+🔮 Prediction for frame_dl_93_001.jpg: porn (67.34%)
+🔮 Prediction for dl_129.jpg: porn (57.16%)
+🔮 Prediction for dl_128.jpg: porn (55.56%)
+🔮 Prediction for frame_dl_121_013.jpg: neutral (53.81%)
+🔮 Prediction for frame_dl_121_021.jpg: porn (83.08%)
+🔮 Prediction for frame_dl_121_004.jpg: porn (82.80%)
+🔮 Prediction for frame_dl_121_016.jpg: porn (96.63%)
+🔮 Prediction for frame_dl_121_003.jpg: porn (65.49%)
+🔮 Prediction for frame_dl_121_022.jpg: porn (99.37%)
+🔮 Prediction for frame_dl_121_002.jpg: porn (64.98%)
+🔮 Prediction for frame_dl_121_010.jpg: porn (90.70%)
+🔮 Prediction for frame_dl_121_020.jpg: neutral (87.44%)
+🔮 Prediction for frame_dl_121_017.jpg: porn (72.72%)
+🔮 Prediction for frame_dl_121_023.jpg: porn (98.98%)
+🔮 Prediction for frame_dl_121_009.jpg: porn (94.49%)
+🔮 Prediction for frame_dl_121_015.jpg: porn (88.03%)
+🔮 Prediction for frame_dl_121_005.jpg: porn (96.62%)
+🔮 Prediction for frame_dl_121_001.jpg: porn (64.30%)
+🔮 Prediction for frame_dl_121_012.jpg: porn (95.08%)
+🔮 Prediction for frame_dl_121_006.jpg: porn (64.69%)
+🔮 Prediction for frame_dl_121_014.jpg: porn (93.87%)
+🔮 Prediction for frame_dl_121_011.jpg: porn (79.16%)
+🔮 Prediction for frame_dl_121_019.jpg: neutral (54.58%)
+🔮 Prediction for frame_dl_121_008.jpg: porn (79.93%)
+🔮 Prediction for frame_dl_121_018.jpg: neutral (59.19%)
+🔮 Prediction for frame_dl_121_007.jpg: porn (70.69%)
+🔮 Prediction for dl_132.jpg: neutral (52.88%)
+🔮 Prediction for dl_131.jpeg: neutral (98.85%)
+🔮 Prediction for dl_133.jpg: neutral (74.55%)
+🔮 Prediction for frame_dl_130_015.jpg: porn (97.39%)
+🔮 Prediction for frame_dl_130_054.jpg: porn (93.74%)
+🔮 Prediction for frame_dl_130_010.jpg: porn (93.74%)
+🔮 Prediction for frame_dl_130_021.jpg: porn (83.96%)
+🔮 Prediction for frame_dl_130_003.jpg: porn (95.76%)
+🔮 Prediction for frame_dl_130_007.jpg: porn (89.62%)
+🔮 Prediction for frame_dl_130_004.jpg: porn (91.70%)
+🔮 Prediction for frame_dl_130_037.jpg: porn (93.83%)
+🔮 Prediction for frame_dl_130_001.jpg: porn (88.43%)
+🔮 Prediction for frame_dl_130_011.jpg: porn (94.70%)
+🔮 Prediction for frame_dl_130_013.jpg: porn (97.09%)
+🔮 Prediction for frame_dl_130_057.jpg: porn (94.79%)
+🔮 Prediction for frame_dl_130_056.jpg: porn (84.53%)
+🔮 Prediction for frame_dl_130_032.jpg: porn (91.98%)
+🔮 Prediction for frame_dl_130_031.jpg: porn (89.49%)
+🔮 Prediction for frame_dl_130_059.jpg: porn (91.00%)
+🔮 Prediction for frame_dl_130_002.jpg: porn (91.45%)
+🔮 Prediction for frame_dl_130_058.jpg: porn (88.02%)
+🔮 Prediction for frame_dl_130_033.jpg: porn (88.95%)
+🔮 Prediction for frame_dl_130_040.jpg: porn (96.68%)
+🔮 Prediction for frame_dl_130_028.jpg: porn (96.13%)
+🔮 Prediction for frame_dl_130_005.jpg: porn (96.01%)
+🔮 Prediction for frame_dl_130_006.jpg: porn (85.57%)
+🔮 Prediction for frame_dl_130_042.jpg: porn (92.25%)
+🔮 Prediction for frame_dl_130_063.jpg: porn (69.47%)
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_063.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_025.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_052.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:41] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_019.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:42] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_064.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:42] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_039.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:42] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:42] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_062.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:42] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:42] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_060.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_053.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_030.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_035.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_036.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_034.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_024.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_023.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_027.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_026.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:43] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_048.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_050.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_022.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_051.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_046.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_029.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_065.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_045.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_061.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:44] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_041.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_020.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_038.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_055.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_049.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_047.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:45] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_044.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_130_043.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:46] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_136.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:46] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_134.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:47] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:49] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_125_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:49] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_125_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:49] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_125_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:49] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_125_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_125_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_125_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_125_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_125_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_125_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_125_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_137.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:50] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_138.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:53] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:55] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_026.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:55] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_030.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:55] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_027.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:55] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:55] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_018.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_023.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_028.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:56] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_024.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_025.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_015.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_016.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:57] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_017.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_022.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_020.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_021.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_019.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_124_029.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_139.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:58] "[33mGET /raw/drawings/IMAGES/auto_1772093644_dl_141.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:59] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_142.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:59] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_143.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:59] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:47:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_145.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_147.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:59] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_140.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:47:59] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_148.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:00] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_144.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:00] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_149.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:00] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_150.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:00] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_146.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:01] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_152.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:01] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_154.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:02] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:03] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_156.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:03] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_155.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:04] "[33mGET /raw/porn/IMAGES/auto_1772093644_dl_153.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:05] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:05] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_001.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:05] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_003.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:05] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_004.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:05] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_005.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_151_012.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/sexy/IMAGES/auto_1772093644_frame_dl_151_010.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_009.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_007.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_151_011.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_008.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_002.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_151_014.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/neutral/IMAGES/auto_1772093644_frame_dl_151_006.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/porn/IMAGES/auto_1772093644_frame_dl_151_013.jpg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:06] "[33mGET /raw/sexy/IMAGES/auto_1772093644_dl_157.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:07] "[33mGET /raw/neutral/IMAGES/auto_1772093644_dl_158.jpeg HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Feb/2026 13:48:08] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:11] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:14] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:17] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:20] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:23] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:48:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:51] "GET /api/metrics HTTP/1.1" 200 -
+🔮 Prediction for frame_dl_130_025.jpg: porn (95.84%)
+🔮 Prediction for frame_dl_130_017.jpg: porn (91.89%)
+🔮 Prediction for frame_dl_130_052.jpg: porn (96.83%)
+🔮 Prediction for frame_dl_130_019.jpg: porn (92.65%)
+🔮 Prediction for frame_dl_130_064.jpg: porn (75.31%)
+🔮 Prediction for frame_dl_130_012.jpg: porn (82.33%)
+🔮 Prediction for frame_dl_130_039.jpg: porn (95.57%)
+🔮 Prediction for frame_dl_130_062.jpg: porn (95.17%)
+🔮 Prediction for frame_dl_130_018.jpg: porn (87.16%)
+🔮 Prediction for frame_dl_130_060.jpg: porn (96.55%)
+🔮 Prediction for frame_dl_130_053.jpg: porn (95.54%)
+🔮 Prediction for frame_dl_130_030.jpg: porn (94.37%)
+🔮 Prediction for frame_dl_130_035.jpg: porn (78.23%)
+🔮 Prediction for frame_dl_130_036.jpg: porn (85.82%)
+🔮 Prediction for frame_dl_130_034.jpg: porn (94.25%)
+🔮 Prediction for frame_dl_130_024.jpg: porn (87.42%)
+🔮 Prediction for frame_dl_130_008.jpg: porn (88.02%)
+🔮 Prediction for frame_dl_130_009.jpg: porn (91.36%)
+🔮 Prediction for frame_dl_130_023.jpg: porn (83.34%)
+🔮 Prediction for frame_dl_130_027.jpg: porn (92.55%)
+🔮 Prediction for frame_dl_130_026.jpg: porn (96.89%)
+🔮 Prediction for frame_dl_130_014.jpg: porn (87.57%)
+🔮 Prediction for frame_dl_130_048.jpg: porn (94.44%)
+🔮 Prediction for frame_dl_130_050.jpg: porn (85.23%)
+🔮 Prediction for frame_dl_130_022.jpg: porn (97.45%)
+🔮 Prediction for frame_dl_130_051.jpg: porn (97.53%)
+🔮 Prediction for frame_dl_130_046.jpg: porn (97.02%)
+🔮 Prediction for frame_dl_130_029.jpg: porn (94.34%)
+🔮 Prediction for frame_dl_130_065.jpg: porn (69.05%)
+🔮 Prediction for frame_dl_130_045.jpg: porn (77.47%)
+🔮 Prediction for frame_dl_130_061.jpg: porn (89.60%)
+🔮 Prediction for frame_dl_130_016.jpg: porn (90.83%)
+🔮 Prediction for frame_dl_130_041.jpg: porn (90.21%)
+🔮 Prediction for frame_dl_130_020.jpg: porn (97.56%)
+🔮 Prediction for frame_dl_130_038.jpg: porn (84.97%)
+🔮 Prediction for frame_dl_130_055.jpg: porn (94.31%)
+🔮 Prediction for frame_dl_130_049.jpg: porn (86.18%)
+🔮 Prediction for frame_dl_130_047.jpg: porn (90.51%)
+🔮 Prediction for frame_dl_130_044.jpg: porn (78.22%)
+🔮 Prediction for frame_dl_130_043.jpg: porn (93.04%)
+🔮 Prediction for dl_134.jpg: porn (61.81%)
+🔮 Prediction for dl_136.jpg: neutral (83.56%)
+🔮 Prediction for frame_dl_125_010.jpg: porn (66.37%)
+🔮 Prediction for frame_dl_125_006.jpg: sexy (74.73%)
+🔮 Prediction for frame_dl_125_002.jpg: sexy (50.27%)
+🔮 Prediction for frame_dl_125_005.jpg: porn (49.51%)
+🔮 Prediction for frame_dl_125_003.jpg: sexy (50.57%)
+🔮 Prediction for frame_dl_125_008.jpg: porn (62.58%)
+🔮 Prediction for frame_dl_125_004.jpg: porn (93.24%)
+🔮 Prediction for frame_dl_125_001.jpg: porn (59.31%)
+🔮 Prediction for frame_dl_125_009.jpg: porn (87.72%)
+🔮 Prediction for frame_dl_125_007.jpg: porn (77.41%)
+🔮 Prediction for dl_137.jpg: neutral (96.67%)
+🔮 Prediction for dl_138.jpg: neutral (76.41%)
+🔮 Prediction for frame_dl_124_026.jpg: neutral (90.83%)
+🔮 Prediction for frame_dl_124_030.jpg: neutral (76.06%)
+🔮 Prediction for frame_dl_124_027.jpg: neutral (90.28%)
+🔮 Prediction for frame_dl_124_001.jpg: neutral (93.95%)
+🔮 Prediction for frame_dl_124_011.jpg: neutral (86.50%)
+🔮 Prediction for frame_dl_124_005.jpg: neutral (93.13%)
+🔮 Prediction for frame_dl_124_002.jpg: neutral (94.11%)
+🔮 Prediction for frame_dl_124_018.jpg: neutral (85.33%)
+🔮 Prediction for frame_dl_124_014.jpg: neutral (88.05%)
+🔮 Prediction for frame_dl_124_023.jpg: neutral (81.42%)
+🔮 Prediction for frame_dl_124_004.jpg: neutral (96.24%)
+🔮 Prediction for frame_dl_124_028.jpg: neutral (84.80%)
+🔮 Prediction for frame_dl_124_024.jpg: neutral (71.93%)
+🔮 Prediction for frame_dl_124_007.jpg: neutral (91.86%)
+🔮 Prediction for frame_dl_124_025.jpg: neutral (77.47%)
+🔮 Prediction for frame_dl_124_015.jpg: neutral (95.23%)
+🔮 Prediction for frame_dl_124_009.jpg: neutral (93.08%)
+🔮 Prediction for frame_dl_124_006.jpg: neutral (94.96%)
+🔮 Prediction for frame_dl_124_016.jpg: neutral (91.72%)
+🔮 Prediction for frame_dl_124_010.jpg: neutral (84.30%)
+🔮 Prediction for frame_dl_124_008.jpg: neutral (84.64%)
+🔮 Prediction for frame_dl_124_003.jpg: neutral (94.94%)
+🔮 Prediction for frame_dl_124_017.jpg: neutral (83.69%)
+🔮 Prediction for frame_dl_124_022.jpg: neutral (78.39%)
+🔮 Prediction for frame_dl_124_013.jpg: neutral (88.79%)
+🔮 Prediction for frame_dl_124_020.jpg: neutral (73.22%)
+🔮 Prediction for frame_dl_124_021.jpg: neutral (65.07%)
+🔮 Prediction for frame_dl_124_019.jpg: neutral (85.26%)
+🔮 Prediction for frame_dl_124_012.jpg: neutral (89.37%)
+🔮 Prediction for frame_dl_124_029.jpg: neutral (78.66%)
+🔮 Prediction for dl_139.jpeg: porn (92.98%)
+🔮 Prediction for dl_141.jpg: drawings (55.42%)
+🔮 Prediction for dl_142.jpg: neutral (76.16%)
+🔮 Prediction for dl_143.jpeg: sexy (91.63%)
+🔮 Prediction for dl_140.jpg: sexy (65.92%)
+🔮 Prediction for dl_145.jpg: porn (63.92%)
+🔮 Prediction for dl_147.jpg: porn (94.60%)
+🔮 Prediction for dl_148.jpg: porn (84.89%)
+🔮 Prediction for dl_144.jpeg: neutral (97.09%)
+🔮 Prediction for dl_149.jpg: porn (74.76%)
+🔮 Prediction for dl_150.jpg: porn (98.02%)
+🔮 Prediction for dl_146.jpeg: porn (92.67%)
+🔮 Prediction for dl_152.jpg: porn (75.31%)
+🔮 Prediction for dl_154.jpg: porn (75.04%)
+🔮 Prediction for dl_155.jpeg: neutral (96.62%)
+🔮 Prediction for dl_156.jpeg: porn (93.87%)
+🔮 Prediction for dl_153.jpg: porn (57.13%)
+🔮 Prediction for frame_dl_151_001.jpg: neutral (62.31%)
+🔮 Prediction for frame_dl_151_003.jpg: neutral (75.07%)
+🔮 Prediction for frame_dl_151_004.jpg: neutral (61.46%)
+🔮 Prediction for frame_dl_151_005.jpg: neutral (59.19%)
+🔮 Prediction for frame_dl_151_012.jpg: porn (46.61%)
+🔮 Prediction for frame_dl_151_010.jpg: sexy (70.93%)
+🔮 Prediction for frame_dl_151_009.jpg: neutral (48.12%)
+🔮 Prediction for frame_dl_151_008.jpg: neutral (62.42%)
+🔮 Prediction for frame_dl_151_007.jpg: neutral (51.41%)
+🔮 Prediction for frame_dl_151_011.jpg: porn (49.40%)
+🔮 Prediction for frame_dl_151_002.jpg: neutral (59.47%)
+🔮 Prediction for frame_dl_151_014.jpg: porn (43.92%)
+🔮 Prediction for frame_dl_151_006.jpg: neutral (75.31%)
+🔮 Prediction for frame_dl_151_013.jpg: porn (49.58%)
+🔮 Prediction for dl_157.png: sexy (68.02%)
+🔮 Prediction for dl_158.jpeg: neutral (49.26%)
+🔮 Prediction for frame_dl_135_004.jpg: sexy (49.72%)
+🔮 Prediction for frame_dl_135_029.jpg: porn (51.51%)
+🔮 Prediction for frame_dl_135_026.jpg: neutral (53.83%)
+🔮 Prediction for frame_dl_135_022.jpg: neutral (56.89%)
+🔮 Prediction for frame_dl_135_005.jpg: neutral (88.17%)
+🔮 Prediction for frame_dl_135_023.jpg: neutral (89.16%)
+🔮 Prediction for frame_dl_135_025.jpg: porn (34.68%)
+🔮 Prediction for frame_dl_135_021.jpg: neutral (56.41%)
+🔮 Prediction for frame_dl_135_024.jpg: porn (45.66%)
+🔮 Prediction for frame_dl_135_019.jpg: neutral (53.28%)
+🔮 Prediction for frame_dl_135_030.jpg: porn (61.52%)
+🔮 Prediction for frame_dl_135_008.jpg: neutral (52.29%)
+🔮 Prediction for frame_dl_135_002.jpg: neutral (51.81%)
+🔮 Prediction for frame_dl_135_016.jpg: porn (38.24%)
+🔮 Prediction for frame_dl_135_015.jpg: neutral (65.17%)
+🔮 Prediction for frame_dl_135_034.jpg: porn (50.08%)
+🔮 Prediction for frame_dl_135_011.jpg: porn (61.67%)
+🔮 Prediction for frame_dl_135_003.jpg: neutral (63.26%)
+🔮 Prediction for frame_dl_135_012.jpg: porn (66.23%)
+🔮 Prediction for frame_dl_135_013.jpg: neutral (52.94%)
+🔮 Prediction for frame_dl_135_027.jpg: sexy (39.26%)
+🔮 Prediction for frame_dl_135_031.jpg: sexy (58.75%)
+🔮 Prediction for frame_dl_135_007.jpg: neutral (75.05%)
+🔮 Prediction for frame_dl_135_032.jpg: sexy (61.84%)
+🔮 Prediction for frame_dl_135_028.jpg: sexy (46.87%)
+🔮 Prediction for frame_dl_135_014.jpg: sexy (48.24%)
+🔮 Prediction for frame_dl_135_006.jpg: neutral (48.89%)
+🔮 Prediction for frame_dl_135_017.jpg: sexy (38.76%)
+🔮 Prediction for frame_dl_135_020.jpg: neutral (48.72%)
+🔮 Prediction for frame_dl_135_033.jpg: sexy (56.22%)127.0.0.1 - - [26/Feb/2026 13:48:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:48:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:51] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:49:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:40] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:43] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:46] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:49] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:52] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:55] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:50:58] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:01] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:04] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:07] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:10] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:13] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:16] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:51:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:51:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:51:22] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:51:22] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:51:23] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:51:23] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:51:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:51] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:51:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:51] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:52:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:51] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:53:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:27] "GET /api/metrics HTTP/1.1" 200 -
+ * Detected change in '/home/harsimran-singh/Documents/projects/nsfw_data_scraper/dashboard.py', reloading
+
+🔮 Prediction for frame_dl_135_010.jpg: porn (76.24%)
+🔮 Prediction for frame_dl_135_018.jpg: neutral (54.20%)
+🔮 Prediction for frame_dl_135_009.jpg: neutral (80.24%)
+🔮 Prediction for frame_dl_135_001.jpg: neutral (44.19%)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 443-243-139
+127.0.0.1 - - [26/Feb/2026 13:54:37] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:37] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:37] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:51] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:54:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:51] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:55:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:51] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:56:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:36] "GET /api/metrics HTTP/1.1" 200 -
+ * Detected change in '/home/harsimran-singh/Documents/projects/nsfw_data_scraper/dashboard.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 443-243-139
+127.0.0.1 - - [26/Feb/2026 13:57:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:48] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:51] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:54] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:57:57] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:00] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:03] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:06] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:09] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:18] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:21] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:24] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:27] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:30] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:33] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:36] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:39] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:42] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:45] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:58:47] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:47] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:50] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:50] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:53] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:53] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:56] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:56] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:59] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:58:59] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:02] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:02] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:05] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:05] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:08] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:08] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:59:10] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:10] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:59:11] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:11] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:59:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:12] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:59:12] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:12] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:59:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:15] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:59:15] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:15] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:59:16] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:16] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [26/Feb/2026 13:59:16] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:16] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:19] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:19] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:22] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:22] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:25] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:25] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:28] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:28] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:31] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:31] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:34] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:34] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:37] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:37] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:40] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:40] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:43] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:43] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:46] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:46] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:49] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:49] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:52] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:52] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:55] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:55] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:58] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 13:59:58] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:01] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:01] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:04] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:04] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:07] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:07] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:10] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:10] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:13] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:13] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:16] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:16] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:19] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:19] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:22] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:22] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:25] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:25] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:28] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:28] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:31] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:31] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:34] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:34] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:37] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:37] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:40] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:40] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:43] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:43] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:46] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:46] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:49] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:49] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:52] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:52] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:55] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:55] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:58] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:00:58] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:01] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:01] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:04] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:04] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:07] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:07] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:10] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:10] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:13] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:13] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:16] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:16] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:19] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:19] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:22] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:22] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:25] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:25] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:28] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:28] "GET /api/data_insights HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:31] "GET /api/metrics HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:01:31] "GET /api/data_insights HTTP/1.1" 200 -

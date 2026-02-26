@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Scraper Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <div class="status-indicator" id="status-dot"></div>
+                <h1>Scraper <span class="highlight">Engine</span></h1>
+            </div>
+            <div class="controls" style="display: flex; gap: 10px;">
+                <select id="category-select" class="dropdown"
+                    style="background: var(--bg-color); color: var(--text-main); border: 1px solid var(--panel-border); border-radius: 6px; padding: 0.6rem 1rem; font-family: var(--font-sans); cursor: pointer;">
+                    <option value="all">All Categories</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="drawings">Drawings</option>
+                    <option value="sexy">Sexy</option>
+                    <option value="porn">Porn</option>
+                    <option value="hentai">Hentai</option>
+                </select>
+                <a href="/test" class="btn secondary" style="text-decoration: none;">🔍 Validate Model</a>
+                <button id="start-btn" class="btn primary">Start Scraping</button>
+                <button id="stop-btn" class="btn hidden">Stop Engine</button>
+            </div>
+        </header>
+
+        <!-- Current Status Metric -->
+        <section class="current-task">
+            <h3>Current Data Target</h3>
+            <div class="metric-value url-display" id="current-url">Awaiting engine startup...</div>
+            <p class="status-text" id="engine-status">Engine is offline.</p>
+        </section>
+
+        <!-- Smart Ingest Section -->
+        <section class="current-task" style="margin-top: 1.5rem; border-color: var(--accent);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="color: var(--accent); margin-bottom: 0;">🚀 Smart Link Ingestor</h3>
+                <span
+                    style="font-size: 0.7rem; color: var(--text-muted); padding: 2px 8px; border: 1px solid var(--panel-border); border-radius: 4px;">BETA</span>
+            </div>
+            <div class="url-box" style="margin-top: 1rem;">
+                <input type="text" id="ingest-url" class="url-input"
+                    placeholder="Paste gallery link (Imgur, Reddit, etc.)" style="flex: 1;">
+                <button id="ingest-btn" class="btn primary"
+                    style="background: var(--accent); border-color: var(--accent);">Ingest & Sort</button>
+                <button id="stop-ingest-btn" class="btn secondary hidden"
+                    style="border-color: var(--danger); color: var(--danger); margin-left: 0.5rem;">Stop Ingest</button>
+            </div>
+            <p id="ingest-status" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.8rem;">
+                Model will automatically download and sort images into correct categories.
+            </p>
+
+            <!-- Live Ingest Feed -->
+            <div id="ingest-feed-container" class="hidden"
+                style="margin-top: 1.5rem; border-top: 1px solid var(--panel-border); padding-top: 1.5rem;">
+                <h4
+                    style="font-size: 0.8rem; text-transform: uppercase; color: #888; letter-spacing: 1px; margin-bottom: 1rem;">
+                    Live Ingest Feed</h4>
+                <div id="ingest-previews"
+                    style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 1rem; margin-bottom: 1rem; height: 120px; align-items: center;">
+                    <!-- Predictions will appear here -->
+                </div>
+                <div id="ingest-console"
+                    style="background: #000; border: 1px solid var(--panel-border); border-radius: 8px; padding: 1rem; height: 150px; overflow-y: auto; font-family: var(--font-mono); font-size: 0.8rem; color: #aaa;">
+                    <div id="ingest-log-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="main-grid">
+
+            <!-- Progress Section -->
+            <section class="progress-section">
+                <h2>Category Cap Targets</h2>
+                <div class="progress-container" id="progress-mount">
+                    <!-- Progress bars generated dynamically -->
+                </div>
+            </section>
+
+            <!-- Terminal Section -->
+            <section class="terminal-section">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                    <h2>Live Console</h2>
+                    <h3 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Recent Downloads
+                    </h3>
+                </div>
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; flex: 1;">
+                    <div class="terminal-window" id="terminal-out">
+                        <div id="terminal-content"></div>
+                    </div>
+
+                    <!-- Recent Files Mini-Terminal View -->
+                    <div class="terminal-window"
+                        style="background: var(--bg-color); border: 1px solid var(--panel-border);">
+                        <ul id="recent-files-list"
+                            style="list-style: none; padding: 0.5rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.8rem; overflow: hidden; width: 100%;">
+                            <li style="color: var(--text-muted);">Awaiting image data...</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Data Insights Section -->
+        <section class="current-task" style="margin-top: 1.5rem; border-color: #4CAF50;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="color: #4CAF50; margin-bottom: 0;">📊 Local Data Insights</h3>
+                <span id="insight-last-update" style="font-size: 0.7rem; color: var(--text-muted);">Last sync:
+                    --:--:--</span>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                <div class="metric-card"
+                    style="background: rgba(76, 175, 80, 0.05); border: 1px solid rgba(76, 175, 80, 0.2); border-radius: 8px; padding: 1rem;">
+                    <p style="color: #4CAF50; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem;">
+                        Total Volume</p>
+                    <div style="display: flex; align-items: baseline; gap: 8px;">
+                        <span id="insight-total-files"
+                            style="font-size: 1.8rem; font-weight: 700; color: var(--text-main);">0</span>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Files</span>
+                    </div>
+                    <p id="insight-total-mb" style="margin-top: 4px; font-size: 0.85rem; color: var(--text-muted);">0.0
+                        MB total storage</p>
+                </div>
+
+                <div class="metric-card"
+                    style="background: rgba(100, 181, 246, 0.05); border: 1px solid rgba(100, 181, 246, 0.2); border-radius: 8px; padding: 1rem;">
+                    <p style="color: #64B5F6; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem;">
+                        Collection Method</p>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="font-size: 0.85rem; color: var(--text-main);">🚀 Smart Ingest</span>
+                        <span id="insight-auto-count"
+                            style="font-size: 0.85rem; font-weight: 700; color: #64B5F6;">0</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="font-size: 0.85rem; color: var(--text-main);">🤖 Scraper Engine</span>
+                        <span id="insight-manual-count"
+                            style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">0</span>
+                    </div>
+                    <div class="progress-track"
+                        style="margin-top: 10px; height: 4px; background: rgba(255,255,255,0.05);">
+                        <div id="insight-auto-bar" class="progress-fill" style="width: 0%; background: #64B5F6;"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card"
+                    style="background: rgba(255, 152, 0, 0.05); border: 1px solid rgba(255, 152, 0, 0.2); border-radius: 8px; padding: 1rem;">
+                    <p style="color: #FF9800; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem;">
+                        Category Balance</p>
+                    <div id="insight-cat-chart"
+                        style="display: flex; gap: 4px; height: 30px; align-items: flex-end; margin-top: 10px;">
+                        <!-- Mini bars added here -->
+                    </div>
+                    <p id="insight-top-cat" style="margin-top: 8px; font-size: 0.85rem; color: var(--text-muted);">
+                        Balanced dataset</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+
+    <script>
+        const API_URL = '';
+        let eventSource = null;
+        let metricsInterval = null;
+
+        const ui = {
+            statusDot: document.getElementById('status-dot'),
+            engineStatus: document.getElementById('engine-status'),
+            categorySelect: document.getElementById('category-select'),
+            startBtn: document.getElementById('start-btn'),
+            stopBtn: document.getElementById('stop-btn'),
+            currentUrl: document.getElementById('current-url'),
+            terminal: document.getElementById('terminal-content'),
+            terminalWindow: document.getElementById('terminal-out'),
+            progressMount: document.getElementById('progress-mount'),
+            recentFilesList: document.getElementById('recent-files-list')
+        };
+
+        const CATEGORIES = ["neutral", "drawings", "sexy", "porn", "hentai"];
+
+        // initialize progress bars
+        function renderProgressBars() {
+            ui.progressMount.innerHTML = '';
+            CATEGORIES.forEach(cat => {
+                ui.progressMount.innerHTML += `
+                    <div class="progress-item" id="bar-${cat}">
+                        <div class="progress-header">
+                            <span class="cat-label">${cat.charAt(0).toUpperCase() + cat.slice(1)}</span>
+                            <div style="text-align: right;">
+                                <span class="cat-value" id="val-${cat}">0 / 2,048 MB</span>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+                                    <span id="files-${cat}">0</span> files
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-track" style="margin-top: 5px;">
+                            <div class="progress-fill" id="fill-${cat}" style="width: 0%"></div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        async function fetchMetrics() {
+            try {
+                const res = await fetch(API_URL + '/api/metrics');
+                const data = await res.json();
+
+                // Update system status
+                if (data.status === "Running") {
+                    ui.statusDot.classList.add('active');
+                    ui.engineStatus.innerText = "Engine is running smoothly.";
+                    ui.startBtn.classList.add('hidden');
+                    ui.stopBtn.classList.remove('hidden');
+                } else {
+                    ui.statusDot.classList.remove('active');
+                    ui.engineStatus.innerText = "Engine is offline.";
+                    ui.stopBtn.classList.add('hidden');
+                    ui.startBtn.classList.remove('hidden');
+                }
+
+                // Update sizes
+                for (let cat of CATEGORIES) {
+                    if (data.sizes[cat]) {
+                        const m = data.sizes[cat];
+                        const mbValue = (m.current_kb / 1024).toFixed(1);
+                        document.getElementById(`val-${cat}`).innerText = `${mbValue} MB / 2 GB`;
+                        document.getElementById(`files-${cat}`).innerText = m.current_files;
+                        document.getElementById(`fill-${cat}`).style.width = `${m.percentage}%`;
+
+                        // limit hit color change
+                        if (m.percentage >= 99.5) {
+                            document.getElementById(`fill-${cat}`).style.background = '#4CAF50';
+                        }
+                    }
+                }
+
+                // Also fetch insights
+                fetchInsights();
+            } catch (e) {
+                console.error("Metric fetch failed", e);
+            }
+        }
+
+        async function fetchInsights() {
+            try {
+                const res = await fetch(API_URL + '/api/data_insights');
+                const data = await res.json();
+
+                document.getElementById('insight-total-files').innerText = data.total_files.toLocaleString();
+                document.getElementById('insight-total-mb').innerText = `${data.total_mb} MB total storage`;
+                document.getElementById('insight-auto-count').innerText = data.auto_count.toLocaleString();
+                document.getElementById('insight-manual-count').innerText = data.manual_count.toLocaleString();
+                document.getElementById('insight-auto-bar').style.width = `${data.auto_percentage}%`;
+
+                const now = new Date();
+                document.getElementById('insight-last-update').innerText = `Last sync: ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+
+                // Render category balance mini-chart
+                const chart = document.getElementById('insight-cat-chart');
+                chart.innerHTML = '';
+
+                let maxCat = { name: '', count: 0 };
+                CATEGORIES.forEach(cat => {
+                    const count = data.cat_breakdown[cat].total;
+                    if (count > maxCat.count) maxCat = { name: cat, count: count };
+
+                    const p = data.total_files > 0 ? (count / data.total_files * 100) : 0;
+                    const bar = document.createElement('div');
+                    bar.style.flex = '1';
+                    bar.style.height = `${Math.max(10, p * 2)}%`;
+                    bar.style.background = 'var(--accent)';
+                    bar.style.borderRadius = '2px 2px 0 0';
+                    bar.title = `${cat}: ${count} files`;
+                    chart.appendChild(bar);
+                });
+
+                if (maxCat.count > 0) {
+                    document.getElementById('insight-top-cat').innerText = `Lead: ${maxCat.name.toUpperCase()} (${maxCat.count})`;
+                }
+            } catch (e) {
+                console.error("Insights fetch failed", e);
+            }
+        }
+
+        function appendLog(msg) {
+            const el = document.createElement('div');
+            el.className = 'log-line';
+            el.innerText = msg;
+            ui.terminal.appendChild(el);
+
+            // Keep scroll at bottom
+            ui.terminalWindow.scrollTop = ui.terminalWindow.scrollHeight;
+
+            if (msg.includes('------ url:')) {
+                const urlMatch = msg.replace('------ url: ', '');
+                ui.currentUrl.innerText = urlMatch;
+            }
+
+            // Parse wget output to intercept actively downloaded files
+            if (msg.includes('saved [')) {
+                // Typical Wget structure: `2026-02-25 10:45:00 (1.2 MB/s) - ‘filename.jpg’ saved [1024/1024]`
+                const matchName = msg.match(/‘([^’]+)’/);
+                if (matchName && matchName[1]) {
+                    const filename = matchName[1];
+                    addRecentFile(filename);
+                }
+            }
+        }
+
+        let recentFilesStack = [];
+
+        function addRecentFile(filename) {
+            // Check if awaiting element is there, clear it
+            if (ui.recentFilesList.innerHTML.includes('Awaiting')) {
+                ui.recentFilesList.innerHTML = '';
+            }
+
+            // Unshift to add to top of stack, cap at 5
+            recentFilesStack.unshift(filename);
+            if (recentFilesStack.length > 5) {
+                recentFilesStack.pop();
+            }
+
+            ui.recentFilesList.innerHTML = '';
+            recentFilesStack.forEach(f => {
+                // Show max 30 chars of filename
+                const displayStr = f.length > 30 ? f.substring(0, 27) + '...' : f;
+                ui.recentFilesList.innerHTML += `<li style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text-main);">📸 ${displayStr}</li>`;
+            });
+        }
+
+        function initEventStream() {
+            if (eventSource) {
+                eventSource.close();
+            }
+
+            eventSource = new EventSource(API_URL + '/stream');
+            eventSource.onmessage = function (e) {
+                appendLog(e.data);
+            };
+            eventSource.onerror = function () {
+                eventSource.close();
+            };
+        }
+
+        // Actions
+        ui.startBtn.addEventListener('click', async () => {
+            const selectedCategory = ui.categorySelect.value;
+            ui.terminal.innerHTML = '';
+            appendLog(`--> Initializing scraper docker instance (Target: ${selectedCategory})...`);
+            await fetch(API_URL + '/api/start', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ category: selectedCategory })
+            });
+            initEventStream();
+            fetchMetrics();
+        });
+
+        ui.stopBtn.addEventListener('click', async () => {
+            appendLog('--> Sending abort signal to scraper engine...');
+            await fetch(API_URL + '/api/stop', { method: 'POST' });
+            if (eventSource) eventSource.close();
+            fetchMetrics();
+        });
+
+        // Smart Ingest Logic
+        const ingestUrl = document.getElementById('ingest-url');
+        const ingestBtn = document.getElementById('ingest-btn');
+        const stopIngestBtn = document.getElementById('stop-ingest-btn'); // New
+        const ingestStatus = document.getElementById('ingest-status');
+        const ingestFeed = document.getElementById('ingest-feed-container');
+        const ingestLog = document.getElementById('ingest-log-content');
+        const ingestConsole = document.getElementById('ingest-console');
+        const ingestPreviews = document.getElementById('ingest-previews');
+
+        let ingestEventSource = null;
+
+        function appendIngestLog(msg, color = '#aaa') {
+            const div = document.createElement('div');
+            div.style.color = color;
+            div.style.marginBottom = '2px';
+            div.innerText = msg;
+            ingestLog.appendChild(div);
+            ingestConsole.scrollTop = ingestConsole.scrollHeight;
+        }
+
+        function addIngestPreview(cat, filename) {
+            const wrapper = document.createElement('div');
+            wrapper.style.minWidth = '80px';
+            wrapper.style.height = '100px';
+            wrapper.style.position = 'relative';
+            wrapper.style.borderRadius = '6px';
+            wrapper.style.overflow = 'hidden';
+            wrapper.style.border = '1px solid var(--panel-border)';
+
+            const img = document.createElement('img');
+            img.src = `/raw/${cat}/IMAGES/${filename}`; // Note: it might take a second to be available if shutil.move is slow
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+
+            const badge = document.createElement('div');
+            badge.innerText = cat;
+            badge.style.position = 'absolute';
+            badge.style.bottom = '0';
+            badge.style.width = '100%';
+            badge.style.background = 'rgba(0,0,0,0.7)';
+            badge.style.color = '#fff';
+            badge.style.fontSize = '0.6rem';
+            badge.style.textAlign = 'center';
+            badge.style.padding = '2px 0';
+
+            wrapper.appendChild(img);
+            wrapper.appendChild(badge);
+            ingestPreviews.insertBefore(wrapper, ingestPreviews.firstChild);
+        }
+
+        ingestBtn.addEventListener('click', async () => {
+            const url = ingestUrl.value.trim();
+            if (!url) return;
+
+            ingestBtn.disabled = true;
+            ingestBtn.innerText = '🚢 Processing...';
+            stopIngestBtn.classList.remove('hidden'); // Show stop button
+            stopIngestBtn.disabled = false;
+            stopIngestBtn.innerText = 'Stop Ingest';
+
+            ingestStatus.innerText = 'Initializing background ingest...';
+            ingestFeed.classList.remove('hidden');
+            ingestLog.innerHTML = '';
+            ingestPreviews.innerHTML = '';
+
+            try {
+                const res = await fetch(API_URL + '/api/auto_ingest', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url })
+                });
+                const data = await res.json();
+
+                if (data.status === 'queued') {
+                    startIngestStream();
+                } else {
+                    ingestStatus.innerText = `❌ Error: ${data.error}`;
+                    ingestBtn.disabled = false;
+                    ingestBtn.innerText = 'Ingest & Sort';
+                    stopIngestBtn.classList.add('hidden');
+                }
+            } catch (e) {
+                ingestStatus.innerText = '❌ Connection failed.';
+                ingestBtn.disabled = false;
+                ingestBtn.innerText = 'Ingest & Sort';
+                stopIngestBtn.classList.add('hidden');
+            }
+        });
+
+        stopIngestBtn.addEventListener('click', async () => {
+            stopIngestBtn.disabled = true;
+            stopIngestBtn.innerText = 'Stopping...';
+            try {
+                await fetch(API_URL + '/api/ingest_stop', { method: 'POST' });
+            } catch (e) {
+                console.error("Stop failed", e);
+            }
+        });
+
+        function startIngestStream() {
+            if (ingestEventSource) ingestEventSource.close();
+
+            ingestEventSource = new EventSource(API_URL + '/ingest_stream');
+
+            ingestEventSource.onmessage = function (e) {
+                const data = e.data;
+
+                if (data === 'DONE' || data.includes("🛑 Ingest stopping...")) {
+                    if (data.includes("🛑 Ingest stopping...")) {
+                        ingestStatus.innerText = '🛑 Ingest aborted.';
+                    } else {
+                        ingestStatus.innerText = '✅ Ingest complete!';
+                    }
+                    ingestBtn.disabled = false;
+                    ingestBtn.innerText = 'Ingest & Sort';
+                    stopIngestBtn.classList.add('hidden');
+                    ingestEventSource.close();
+                    fetchMetrics();
+                    fetchInsights();
+                    return;
+                }
+
+                if (data.startsWith('LOG:')) {
+                    const logMsg = data.replace('LOG:', '');
+                    appendIngestLog(logMsg, '#FFFFFF');
+                    if (logMsg.includes("🛑 Ingest stopping...")) {
+                        ingestStatus.innerText = '🛑 Aborting...';
+                    }
+                } else if (data.startsWith('PRED:')) {
+                    const [cat, filename] = data.replace('PRED:', '').split('|');
+                    appendIngestLog(`✨ Classified as ${cat.toUpperCase()}`, 'var(--success)');
+                    addIngestPreview(cat, filename);
+                }
+            };
+
+            ingestEventSource.onerror = function () {
+                ingestEventSource.close();
+                ingestBtn.disabled = false;
+                ingestBtn.innerText = 'Ingest & Sort';
+            };
+        }
+
+        // Initialize
+        renderProgressBars();
+        fetchMetrics();
+        metricsInterval = setInterval(fetchMetrics, 3000); 
+    </script>
+</body>
+
+</html>
