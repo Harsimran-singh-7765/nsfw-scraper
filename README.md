@@ -32,7 +32,7 @@ Because scraped datasets are inevitably noisy, we built a modern Flask-based UI 
 ### Scraper Engine and Live Ingestor
 The dashboard provides a real-time view into the scraping tasks, displaying active ingestion logs and a live preview of the incoming images as they are classified.
 
-![Scraper Engine Logs](assets/Screenshot%20from%202026-02-26%2018-44-19_blurred.png)
+![Scraper Engine Logs](assets/Screenshot%20from%202026-02-26%2018-44-19.png)
 *Live ingestion feed demonstrating the Reddit scraping fallback mode.*
 
 ![Scraper Category Targets](assets/Screenshot%20from%202026-02-26%2018-45-35_blurred.png)
