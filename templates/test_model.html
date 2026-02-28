@@ -292,7 +292,16 @@
                     <h1>Model <span class="highlight">Validation</span></h1>
                 </a>
             </div>
-            <div class="controls">
+            <div class="controls" style="display: flex; gap: 1rem; align-items: center;">
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                    <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Active
+                        Model</span>
+                    <select id="model-select" class="url-input"
+                        style="background: rgba(0,0,0,0.3); padding: 5px 10px; border-radius: 6px; cursor: pointer; min-width: 180px;"
+                        title="Loading available models...">
+                        <option>Loading models...</option>
+                    </select>
+                </div>
                 <a href="/" class="btn secondary">Back to Scraper</a>
             </div>
         </header>
@@ -815,6 +824,71 @@
                 `;
             });
         }
+
+        // --- Model Selector Logic ---
+        const modelSelect = document.getElementById('model-select');
+
+        async function loadModels() {
+            try {
+                const res = await fetch('/api/models');
+                const models = await res.json();
+
+                modelSelect.innerHTML = '';
+                models.forEach(m => {
+                    const opt = document.createElement('option');
+                    opt.value = m.id;
+                    opt.text = m.name;
+                    // The 'title' attribute shows the native browser tooltip on hover
+                    opt.title = `Accuracy: ${m.accuracy} | Architecture: ${m.arch}\n${m.description}`;
+
+                    if (m.active) {
+                        opt.selected = true;
+                        modelSelect.title = opt.title; // Update parent title too
+                    }
+                    modelSelect.appendChild(opt);
+                });
+            } catch (e) {
+                console.error("Failed to load models:", e);
+                modelSelect.innerHTML = '<option value="">Error loading models</option>';
+            }
+        }
+
+        modelSelect.addEventListener('change', async (e) => {
+            const newModelId = e.target.value;
+            if (!newModelId) return;
+
+            // Show loading state
+            ui.loader.style.display = 'block';
+
+            try {
+                const res = await fetch('/api/set_model', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ model_id: newModelId })
+                });
+
+                if (res.ok) {
+                    // Update tooltip for the newly selected option
+                    const selectedOpt = modelSelect.options[modelSelect.selectedIndex];
+                    modelSelect.title = selectedOpt.title;
+
+                    // Re-run prediction on the current image if there is one
+                    if (currentImagePath && ui.resultContent.style.display === 'block') {
+                        ui.predictBtn.click();
+                    }
+                } else {
+                    alert("Failed to switch model.");
+                    await loadModels(); // Revert
+                }
+            } catch (err) {
+                console.error(err);
+                await loadModels(); // Revert
+            }
+            ui.loader.style.display = 'none';
+        });
+
+        // Initialize models on load
+        loadModels();
     </script>
 </body>
 

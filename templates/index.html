@@ -49,13 +49,30 @@
                 <span
                     style="font-size: 0.7rem; color: var(--text-muted); padding: 2px 8px; border: 1px solid var(--panel-border); border-radius: 4px;">BETA</span>
             </div>
-            <div class="url-box" style="margin-top: 1rem;">
+            <div class="url-box" style="margin-top: 1rem; display: flex; gap: 0.5rem; align-items: stretch;">
                 <input type="text" id="ingest-url" class="url-input"
                     placeholder="Paste gallery link (Imgur, Reddit, etc.)" style="flex: 1;">
+                <select id="ingest-force-category" class="url-input"
+                    style="width: 140px; background: rgba(0,0,0,0.2); cursor: pointer;"
+                    title="Select 'Auto' to use the AI model, or force all links into a specific category.">
+                    <option value="">🤖 Auto (AI)</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="drawings">Drawings</option>
+                    <option value="sexy">Sexy</option>
+                    <option value="porn">Porn</option>
+                    <option value="hentai">Hentai</option>
+                </select>
+                <label
+                    style="display: flex; align-items: center; gap: 5px; color: var(--text-main); font-size: 0.85rem; padding: 0 10px; background: rgba(0,0,0,0.2); border: 1px solid var(--panel-border); border-radius: 6px; cursor: pointer;"
+                    title="Enable to queue multiple links without interrupting the current active ingest.">
+                    <input type="checkbox" id="ingest-queue-toggle"
+                        style="accent-color: var(--accent); cursor: pointer;">
+                    Queue
+                </label>
                 <button id="ingest-btn" class="btn primary"
                     style="background: var(--accent); border-color: var(--accent);">Ingest & Sort</button>
                 <button id="stop-ingest-btn" class="btn secondary hidden"
-                    style="border-color: var(--danger); color: var(--danger); margin-left: 0.5rem;">Stop Ingest</button>
+                    style="border-color: var(--danger); color: var(--danger);">Stop Ingest</button>
             </div>
             <p id="ingest-status" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.8rem;">
                 Model will automatically download and sort images into correct categories.
@@ -442,20 +459,35 @@
             stopIngestBtn.innerText = 'Stop Ingest';
 
             ingestStatus.innerText = 'Initializing background ingest...';
-            ingestFeed.classList.remove('hidden');
-            ingestLog.innerHTML = '';
-            ingestPreviews.innerHTML = '';
+            if (!document.getElementById('ingest-queue-toggle').checked) {
+                ingestFeed.classList.remove('hidden');
+                ingestLog.innerHTML = '';
+                ingestPreviews.innerHTML = '';
+            } else {
+                ingestFeed.classList.remove('hidden');
+            }
 
             try {
+                const forceCategory = document.getElementById('ingest-force-category').value;
+                const queueMode = document.getElementById('ingest-queue-toggle').checked;
+
                 const res = await fetch(API_URL + '/api/auto_ingest', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ url })
+                    body: JSON.stringify({ url: url, force_category: forceCategory || null, queue_mode: queueMode })
                 });
                 const data = await res.json();
 
                 if (data.status === 'queued') {
-                    startIngestStream();
+                    if (data.active) {
+                        ingestStatus.innerText = `⏳ Link added to queue (Position ${data.position}). Engine is continuing...`;
+                        ingestUrl.value = ''; // clear input for next link
+                        ingestBtn.disabled = false;
+                        ingestBtn.innerText = 'Ingest & Sort';
+                    } else {
+                        // Fresh start
+                        startIngestStream();
+                    }
                 } else {
                     ingestStatus.innerText = `❌ Error: ${data.error}`;
                     ingestBtn.disabled = false;

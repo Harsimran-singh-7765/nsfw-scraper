@@ -7,7 +7,9 @@ import queue
 import time
 import shutil
 import requests
+from bs4 import BeautifulSoup
 import concurrent.futures
+from urllib.parse import urljoin
 from flask import Flask, render_template, Response, jsonify, request, send_from_directory
 from model_utils import get_classifier
 
@@ -102,7 +104,71 @@ def get_reddit_urls(reddit_url):
     except: pass
     return list(set(urls))
 
-def classify_worker(classify_q, ingest_id):
+def _fetch_generic_urls(url):
+    ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    urls = []
+    try:
+        r = requests.get(url, headers={"User-Agent": ua}, timeout=15)
+        html_content = r.text
+        
+        # 1. Regex approach: Find raw URLs hidden in JSON/JS vars
+        import re
+        raw_matches = re.findall(r'(https?://[^\s"\'<>*?\\!]*?\.(?:jpg|jpeg|png|webp|gif))', html_content, re.IGNORECASE)
+        for match in raw_matches:
+            urls.append(match)
+            
+        # 2. BeautifulSoup approach: Find standard DOM elements
+        soup = BeautifulSoup(html_content, 'html.parser')
+        
+        for img in soup.find_all('img'):
+            src = img.get('data-src') or img.get('src') or img.get('data-original')
+            if src:
+                src = urljoin(url, src)
+                if not src.startswith('data:'):
+                    urls.append(src)
+        
+        for source in soup.find_all('source'):
+            src = source.get('srcset') or source.get('data-srcset')
+            if src:
+                first_url = src.split(',')[0].split(' ')[0]
+                first_url = urljoin(url, first_url)
+                if not first_url.startswith('data:'):
+                    urls.append(first_url)
+                    
+    except Exception as e:
+        print(f"Generic scrape error for {url}: {e}")
+    return urls
+
+def get_generic_image_urls(base_url):
+    all_raw_urls = set()
+    urls_to_fetch = [base_url]
+    
+    # Special pagination handling for infinite-scroll sites
+    if 'pornpics' in base_url.lower():
+        # Scrape up to 15 pages worth of images (~300 images)
+        for offset in range(20, 300, 20):
+            sep = "&" if "?" in base_url else "?"
+            urls_to_fetch.append(f"{base_url}{sep}offset={offset}")
+            
+    for target_url in urls_to_fetch:
+        page_urls = set(_fetch_generic_urls(target_url))
+        if not page_urls:
+            break
+        all_raw_urls.update(page_urls)
+
+    valid_urls = []
+    # Deduplicate and filter out obvious garbage or tiny icons
+    for u in all_raw_urls:
+        if len(u) > 15 and not any(bad in u.lower() for bad in ['favicon', 'logo', 'icon', 'tracker', 'pixel']):
+            # Special case for PornPics to upgrade thumbnails to high resolution
+            if 'pornpics.de' in u or 'pornpics.com' in u:
+                u = u.replace('/460/', '/1280/')
+                u = u.replace('/300/', '/1280/')
+            valid_urls.append(u)
+            
+    return valid_urls
+
+def classify_worker(classify_q, ingest_id, force_category=None):
     classifier = get_classifier()
     while True:
         filepath = classify_q.get()
@@ -131,15 +197,22 @@ def classify_worker(classify_q, ingest_id):
                 files_to_classify.append(filepath)
                 
             for src_path in files_to_classify:
-                prediction = classifier.predict(src_path)
-                if "error" not in prediction:
-                    cat = prediction["class"]
+                cat = None
+                if force_category and force_category in CATEGORIES:
+                    cat = force_category
+                else:
+                    prediction = classifier.predict(src_path)
+                    if "error" not in prediction:
+                        cat = prediction["class"]
+                
+                if cat:
                     ingest_status["processed"] += 1
                     
                     fname = os.path.basename(src_path)
                     dest_cat_dir = os.path.join(RAW_DATA_DIR, cat, "IMAGES")
                     os.makedirs(dest_cat_dir, exist_ok=True)
-                    dest_filename = f"auto_{ingest_id}_{fname}"
+                    prefix = f"force_{cat}" if force_category else "auto"
+                    dest_filename = f"{prefix}_{ingest_id}_{fname}"
                     dest_path = os.path.join(dest_cat_dir, dest_filename)
                     shutil.move(src_path, dest_path)
                     
@@ -152,14 +225,25 @@ def classify_worker(classify_q, ingest_id):
 def ingest_worker():
     global ingest_status, stop_ingest
     while True:
-        url = ingest_queue.get()
-        if url is None: break
+        task = ingest_queue.get()
+        if task is None: break
+        
+        if isinstance(task, str):
+            url = task
+            force_category = None
+        else:
+            url = task.get("url")
+            force_category = task.get("force_category")
         
         stop_ingest = False
         ingest_status["active"] = True
         ingest_status["total"] = 0
         ingest_status["processed"] = 0
-        ingest_logs.append(f"LOG:🚀 Starting ingest for {url}")
+        
+        if force_category:
+            ingest_logs.append(f"LOG:🚀 Starting targeted ingest for {url} --> [{force_category.upper()}]")
+        else:
+            ingest_logs.append(f"LOG:🚀 Starting AI smart ingest for {url}")
         
         try:
             classifier = get_classifier()
@@ -169,7 +253,7 @@ def ingest_worker():
             os.makedirs(current_ingest_path, exist_ok=True)
             
             classify_q = queue.Queue()
-            classifier_thread = threading.Thread(target=classify_worker, args=(classify_q, ingest_id))
+            classifier_thread = threading.Thread(target=classify_worker, args=(classify_q, ingest_id, force_category))
             classifier_thread.start()
             
             if "reddit.com" in url or "redgifs.com" in url:
@@ -212,27 +296,69 @@ def ingest_worker():
                 process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
                 polled_files = set()
                 
+                # Check for output, but don't hang forever if RipMe is failing silently
+                start_wait = time.time()
                 while True:
                     if stop_ingest:
                         process.terminate()
                         ingest_logs.append("LOG:🛑 Ingest stopping...")
                         break
+                        
                     retcode = process.poll()
+                    found_new = False
                     for root, dirs, files in os.walk(current_ingest_path):
                         for f in files:
                             filepath = os.path.join(root, f)
                             if filepath not in polled_files and not f.endswith('.tmp'):
                                 size_a = os.path.getsize(filepath)
-                                time.sleep(0.2)
+                                time.sleep(0.1)
                                 size_b = os.path.getsize(filepath)
                                 if size_a == size_b and size_a > 0:
                                     polled_files.add(filepath)
                                     ingest_logs.append(f"LOG:⬇️ Got chunk! {f[:20]}")
                                     classify_q.put(filepath)
-                                    
+                                    found_new = True
+                    
+                    if found_new:
+                        start_wait = time.time() # Reset timeout if we are successfully downloading
+                        
                     if retcode is not None:
                         break
-                    time.sleep(1)
+                        
+                    # If 20 seconds pass without RipMe finding any files, it likely failed/blocked. 
+                    if len(polled_files) == 0 and time.time() - start_wait > 20.0:
+                        process.terminate()
+                        ingest_logs.append("LOG:⚠️ RipMe timeout. Attempting HTML parser fallback...")
+                        break
+                        
+                    time.sleep(0.5)
+                
+                # If RipMe failed to find anything, run the Generic BeautifulSoup scrape
+                if not stop_ingest and len(polled_files) == 0:
+                    ingest_logs.append("LOG:🕷️ Running HTML fallback parser...")
+                    urls = get_generic_image_urls(url)
+                    ingest_logs.append(f"LOG:🔍 Found {len(urls)} media links via HTML.")
+                    ingest_status["total"] = len(urls)
+                    
+                    def download_and_queue_generic(u, idx):
+                        if stop_ingest: return
+                        ext = u.split('?')[0].split('.')[-1]
+                        if len(ext) > 4 or not ext.isalnum(): ext = 'jpg'
+                        dest = os.path.join(current_ingest_path, f"html_dl_{idx}.{ext}")
+                        if download_file(u, dest):
+                            if stop_ingest: return
+                            ingest_logs.append(f"LOG:⬇️ Got generic chunk! ({idx+1}/{len(urls)})")
+                            classify_q.put(dest)
+                    
+                    if urls:
+                        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+                            futures = [executor.submit(download_and_queue_generic, u, i) for i, u in enumerate(urls)]
+                            while any(f.running() or not f.done() for f in futures):
+                                if stop_ingest:
+                                    for f in futures: f.cancel()
+                                    break
+                                time.sleep(0.5)
+                            concurrent.futures.wait(futures)
 
             # Shutdown classifier
             classify_q.put(None)
@@ -244,7 +370,8 @@ def ingest_worker():
         except Exception as e:
             ingest_logs.append(f"LOG:❌ Fatal Error: {str(e)}")
         
-        ingest_status["active"] = False
+        if ingest_queue.empty():
+            ingest_status["active"] = False
         ingest_queue.task_done()
 
 # Start the worker thread
@@ -262,6 +389,27 @@ def test_page():
 @app.route('/raw/<path:filename>')
 def serve_raw(filename):
     return send_from_directory(RAW_DATA_DIR, filename)
+
+@app.route('/api/models')
+def get_models():
+    """Returns the list of available models and the currently active one"""
+    classifier = get_classifier()
+    return jsonify(classifier.get_available_models())
+
+@app.route('/api/set_model', methods=['POST'])
+def set_model():
+    """Switches the active model"""
+    data = request.get_json()
+    model_id = data.get("model_id")
+    if not model_id:
+        return jsonify({"error": "No model_id provided"}), 400
+        
+    classifier = get_classifier()
+    success = classifier.load_model(model_id)
+    if success:
+        return jsonify({"status": "success", "active_model": model_id})
+    else:
+        return jsonify({"error": f"Failed to load model {model_id}"}), 500
 
 @app.route('/api/data_insights')
 def data_insights():
@@ -618,15 +766,35 @@ def get_feedback_stats():
 def auto_ingest():
     data = request.get_json()
     url = data.get("url")
+    force_category = data.get("force_category")
+    queue_mode = data.get("queue_mode", False)
+    
     if not url:
         return jsonify({"error": "No URL provided"}), 400
     
-    if ingest_status["active"]:
-        return jsonify({"error": "Another ingest is already in progress"}), 400
+    if ingest_status["active"] and not queue_mode:
+        return jsonify({"error": "Another ingest is already in progress. Enable queueing."}), 400
 
-    ingest_logs.clear() # Reset logs for new run
-    ingest_queue.put(url)
-    return jsonify({"status": "queued"})
+    # Save URLs as seed data if a category is explicitly specified
+    if force_category and force_category in CATEGORIES:
+        try:
+            seed_file = os.path.join(DATA_DIR, f"seed_{force_category}_urls.txt")
+            with open(seed_file, "a") as f:
+                f.write(url + "\n")
+        except Exception as e:
+            print(f"Failed to save seed data: {e}")
+
+    # Clear logs only if we are starting fresh (not just appending to an active queue)
+    if not ingest_status["active"]:
+        ingest_logs.clear() 
+        
+    ingest_queue.put({"url": url, "force_category": force_category})
+    
+    return jsonify({
+        "status": "queued", 
+        "position": ingest_queue.qsize(), 
+        "active": ingest_status["active"]
+    })
 
 @app.route('/api/ingest_stop', methods=['POST'])
 def ingest_stop():

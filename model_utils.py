@@ -6,43 +6,34 @@ from PIL import Image
 import os
 from pathlib import Path
 
+AVAILABLE_MODELS = {
+    "efficientnet_v2s": {
+        "id": "efficientnet_v2s",
+        "name": "EfficientNet-V2-S",
+        "arch": "tf_efficientnetv2_s",
+        "accuracy": "96.4%",
+        "filename": "efficientnet_v2s.pth",
+        "description": "Fast & highly accurate (Epoch 10) on 5-class noisy dataset."
+    },
+    "resnet50_v1": {
+        "id": "resnet50_v1",
+        "name": "ResNet-50 (Legacy)",
+        "arch": "resnet50",
+        "accuracy": "85.6%",
+        "filename": "resnet50_v1.pth",
+        "description": "Original model baseline trained on raw uncleaned data."
+    }
+}
+
 class NSFWClassifier:
-    def __init__(self, model_path='best_model.pth', model_name='resnet50'):
-        # Check architecture 
-        print(f"🚀 Initializing NSFW Classifier (Model: {model_name})...")
-        
+    def __init__(self, model_id="efficientnet_v2s"):
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.classes = ['drawings', 'hentai', 'neutral', 'porn', 'sexy']
+        self.active_model_id = None
+        self.model = None
         
-        # Initialize model architecture
-        self.model = timm.create_model(model_name, pretrained=False, num_classes=len(self.classes))
-        
-        # Possible paths
-        paths_to_check = [
-            model_path,
-            os.path.join('scripts', model_path),
-            os.path.join(os.path.dirname(__file__), 'scripts', model_path)
-        ]
-        
-        loaded = False
-        for p in paths_to_check:
-            if os.path.exists(p):
-                try:
-                    state_dict = torch.load(p, map_location=self.device)
-                    self.model.load_state_dict(state_dict)
-                    print(f"✅ SUCCESS: Loaded model weights from '{p}'")
-                    print(f"📊 Model classes: {self.classes}")
-                    loaded = True
-                    break
-                except Exception as e:
-                    print(f"❌ ERROR: Failed to load weights from {p}: {e}")
-        
-        if not loaded:
-            print(f"⚠️ WARNING: Model weights file '{model_path}' NOT FOUND in any common locations!")
-            print(f"   Make sure you uploaded 'best_model.pth' to the root or 'scripts/' folder.")
-            print(f"   Currently using RANDOM WEIGHTS (Results will be incorrect!)")
-            
-        self.model = self.model.to(self.device).eval()
+        # Load the default model
+        self.load_model(model_id)
         
         self.transform = transforms.Compose([
             transforms.Resize(256),
@@ -51,8 +42,54 @@ class NSFWClassifier:
             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])
 
+    def load_model(self, model_id):
+        if model_id not in AVAILABLE_MODELS:
+            print(f"❌ ERROR: Model ID '{model_id}' not found in registry. Falling back to efficientnet_v2s.")
+            model_id = "efficientnet_v2s"
+            
+        if self.active_model_id == model_id:
+            return True # Already loaded
+            
+        model_info = AVAILABLE_MODELS[model_id]
+        print(f"🚀 Initializing NSFW Classifier (Model: {model_info['name']})...")
+        
+        try:
+            # Create new model instance
+            new_model = timm.create_model(model_info['arch'], pretrained=False, num_classes=len(self.classes))
+            
+            model_path = os.path.join(os.path.dirname(__file__), 'models', model_info['filename'])
+            if not os.path.exists(model_path):
+                # fallback check in current dir
+                model_path = os.path.join('models', model_info['filename'])
+                
+            if os.path.exists(model_path):
+                state_dict = torch.load(model_path, map_location=self.device)
+                new_model.load_state_dict(state_dict)
+                self.model = new_model.to(self.device).eval()
+                self.active_model_id = model_id
+                print(f"✅ SUCCESS: Loaded '{model_info['filename']}'")
+                return True
+            else:
+                print(f"❌ ERROR: Weights file '{model_path}' not found!")
+                return False
+        except Exception as e:
+            print(f"❌ ERROR loading model {model_id}: {e}")
+            return False
+
+    def get_available_models(self):
+        # Return list of models with current active status flag
+        registry = []
+        for mid, info in AVAILABLE_MODELS.items():
+            model_data = info.copy()
+            model_data['active'] = (mid == self.active_model_id)
+            registry.append(model_data)
+        return registry
+
     @torch.no_grad()
     def predict(self, image_path):
+        if self.model is None:
+            return {"error": "No model is currently loaded"}
+            
         try:
             image = Image.open(image_path).convert('RGB')
             # Check if image is valid
@@ -69,10 +106,11 @@ class NSFWClassifier:
             result = {
                 "class": self.classes[idx],
                 "confidence": float(conf),
-                "probabilities": {cl: float(prob) for cl, prob in zip(self.classes, probabilities)}
+                "probabilities": {cl: float(prob) for cl, prob in zip(self.classes, probabilities)},
+                "model_used": self.active_model_id
             }
             # Log prediction for debugging
-            print(f"🔮 Prediction for {os.path.basename(image_path)}: {result['class']} ({result['confidence']:.2%})")
+            print(f"🔮 Prediction for {os.path.basename(image_path)} [{self.active_model_id}]: {result['class']} ({result['confidence']:.2%})")
             return result
         except Exception as e:
             print(f"❌ Prediction error: {e}")
