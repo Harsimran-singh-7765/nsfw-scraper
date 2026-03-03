@@ -1,6 +1,8 @@
 import os
 import json
 import shutil
+import zipfile
+import argparse
 from tqdm import tqdm
 
 # Paths
@@ -58,8 +60,6 @@ def sync_feedback():
                 continue
 
         # 2. Determine target filename (strip timestamp prefix for 'local' source)
-        # Many local files look like: 1772096691_7pyinmioh4b31.jpg
-        # The original in raw_data was: 7pyinmioh4b31.jpg
         target_filename = filename
         if source == 'local' and orig_path != 'migrated' and '/' in orig_path:
             target_filename = os.path.basename(orig_path)
@@ -100,5 +100,35 @@ def sync_feedback():
     print(f"❌ Errors: {stats['errors']}")
     print(f"⏭️  Skipped: {stats['skipped']}")
 
+def zip_dataset(output_zip="dataset_latest.zip"):
+    print(f"📦 Starting compression of {RAW_DATA_DIR} into {output_zip}...")
+    
+    # Count total files for progress bar
+    total_files = 0
+    for root, dirs, files in os.walk(RAW_DATA_DIR):
+        total_files += len(files)
+    
+    with zipfile.ZipFile(output_zip, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        with tqdm(total=total_files, desc="Compressing", unit="file") as pbar:
+            for root, dirs, files in os.walk(RAW_DATA_DIR):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    arcname = os.path.relpath(file_path, RAW_DATA_DIR)
+                    zipf.write(file_path, arcname)
+                    pbar.update(1)
+    
+    print(f"✅ Compression complete! File saved as: {output_zip}")
+
 if __name__ == "__main__":
-    sync_feedback()
+    parser = argparse.ArgumentParser(description="Synchronize feedback and zip dataset.")
+    parser.add_argument("--skip-sync", action="store_true", help="Skip the feedback synchronization step.")
+    parser.add_argument("--zip", action="store_true", help="Zip the raw_data directory after synchronization.")
+    parser.add_argument("--output", type=str, default="dataset_latest.zip", help="Output filename for the zip archive.")
+    
+    args = parser.parse_args()
+    
+    if not args.skip_sync:
+        sync_feedback()
+    
+    if args.zip:
+        zip_dataset(args.output)
